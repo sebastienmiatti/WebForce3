@@ -539,6 +539,7 @@ button:hover
     height: 50px;
     text-align: center;
 }
+
 #zoning5 nav
 {
     background: #4ab3f0;
@@ -597,31 +598,35 @@ button:hover
 {
     color: black;
     background: #109e04;
-    width: 800px;
+    width: 798px;
     height: 90px;
     text-align: center;
 }
 
-#zoning6 header div:nth-of-type(1), #zoning6 header div:nth-of-type(2)
+.logo
 {
-    width: 25%;
-    height: 100%;
-    float: left;
+background: yellow;
+width: 25%;
+height: 100%;
 }
 
-#zoning6 header div:nth-of-type(2)
-{
-float: right;
-}
+.logo, .logo1{float: left;}
 
+.logo1
+{
+    background: pink;
+    width:50%;
+    height: 100%;}
 
 #zoning6 section
 {
     width: 80%;
+    height: 200px;
     text-align: center;
     padding: 0;
     float: left;
     margin: 0;
+    background: red;
 }
 
 #zoning6 nav
@@ -633,38 +638,47 @@ float: right;
 
 #zoning6 aside
 {
+    text-align: center;
     float: left;
     background: purple;
     width: 20%;
+    height: 750px;
 }
 
 #zoning6 footer
 {
     background:#000;
-    height: 50px;
+    height: 70px;
     color: #fff;
     text-align: center;
 }
-
-.carre5
+#zoning6 section div
 {
     float: left;
     width: 50%;
-    height: 100px;
+    height: 100%;
+    background: purple;
 }
 
+#zoning6 section:first-of-type div:last-of-type
+{background: brown;}
+
+
+
+
+#zoning6 section:last-of-type
+{height: 150px;}
 
 .carre3
 {
     float: left;
-    width: 50%;
-    height: 100px;
+    width: 25%;
+    background: blue;
+    height: 100%;
 }
 
-.milieu
-{
-    height: 400px;
-    float: left;
-}
+.carre3:nth-of-type(1), .carre3:nth-of-type(3)
+{background: lightgreen;}
+
 
 /***********************FIN PAGE ZONNING***********************/
