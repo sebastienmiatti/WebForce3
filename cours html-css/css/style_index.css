@@ -69,8 +69,9 @@ header
 
 nav
 {
-    background: #2980b9;
+    background: #33cccc;
     height: 50px;
+    border-bottom: 4px solid purple;
 }
 
 main
@@ -370,8 +371,9 @@ button:hover
 .flex
 {
     display: flex;
-    justify-content: space-between;
-
+    /*flex-direction: row-reverse;
+    justify-content: space-between;*/
+    flex-direction: column-reverse;
 }
 
 .flex div
@@ -379,5 +381,290 @@ button:hover
     width: 150px;
     height: 150px;
     background: darkblue;
+    text-align: center;
+    font-size: 50px;
+    color: white;
 }
 /**********************FIN PAGE POSITION***********************/
+
+/**********************DEBUT PAGE ZONNING***********************/
+
+#zoning1
+{
+    /*background: #ffd6d6;*/
+    width: 800px;
+}
+
+    #zoning1 header
+    {
+    background: #fca7a7;
+    height: 70px;
+    }
+
+    #zoning1 aside
+    {
+    float: left;
+    background: #18587a;
+    width: 20%;
+    height: 500px;
+    }
+
+    #zoning1 section
+    {
+        float: left;
+        background: #fc624d;
+        width: 80%;
+        height: 500px;
+        margin: 0;
+        padding: 0;
+    }
+
+#zoning2
+{
+    /*background: red;*/
+    width: 800px;
+}
+
+#zoning2 header
+{
+    background: #8b16f4;
+    height: 70px;
+}
+
+#zoning2 aside
+{
+    float: left;
+    background: #d72e5c;
+    width: 15%;
+    height: 500px;
+}
+
+#zoning2 section
+{
+    float: left;
+    background: #172b91;
+    width: 70%;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+#zoning3
+{
+    /*background: yellow;*/
+    width: 800px;
+}
+
+#zoning3 aside
+{
+    float: left;
+    background: red;
+    width: 50%;
+    height: 400px;
+}
+
+#zoning3 section
+{
+    float: left;
+    background: white;
+    width: 50%;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+#zoning3 section.vert
+{
+    background: green;
+}
+
+#zoning3 footer
+{
+    background:#e4f00e;
+    width: 800px;
+    height: 70px;
+}
+
+
+
+#zoning4
+{
+    /*background: yellow;*/
+    width: 800px;
+    border: 1px solid;
+}
+
+#zoning4 header
+{
+    color: white;
+    background: blue;
+    height: 50px;
+    text-align: center;
+}
+#zoning4 nav
+{
+    background: #4ab3f0;
+    height: 30px;
+    text-align: center;
+}
+
+#zoning4 section
+{
+    background: orange;
+    height: 500px;
+    margin: 20px;
+    text-align: center;
+}
+
+#zoning4 footer
+{
+    background:#000;
+    height: 70px;
+    color: #fff;
+    text-align: center;
+}
+
+
+#zoning5
+{
+    /*background: yellow;*/
+    width: 800px;
+    border: 1px solid;
+}
+
+#zoning5 header
+{
+    color: white;
+    background: blue;
+    height: 50px;
+    text-align: center;
+}
+#zoning5 nav
+{
+    background: #4ab3f0;
+    height: 30px;
+    text-align: center;
+}
+
+#zoning5 section
+{
+    height: 500px;
+    margin: 20px;
+    text-align: center;
+    padding: 0;
+}
+
+#zoning5 footer
+{
+    background:#000;
+    height: 70px;
+    color: #fff;
+    text-align: center;
+}
+
+#zoning5 section div
+{
+    float: left;
+    height: 50%;
+    width: 50%;
+}
+
+#zoning5 section div:last-of-type
+{
+    color: white;
+}
+
+#zoning5 section div:hover
+{
+    transform: rotate(360deg);
+    transition: 1s;
+    border-radius: 100px;
+    background: transparent;
+}
+
+
+
+
+
+#zoning6
+{
+    /*background: yellow;*/
+    width: 800px;
+    border: 1px solid;
+}
+
+#zoning6 header
+{
+    color: black;
+    background: #109e04;
+    width: 800px;
+    height: 90px;
+    text-align: center;
+}
+
+#zoning6 header div:nth-of-type(1), #zoning6 header div:nth-of-type(2)
+{
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+
+#zoning6 header div:nth-of-type(2)
+{
+float: right;
+}
+
+
+#zoning6 section
+{
+    width: 80%;
+    text-align: center;
+    padding: 0;
+    float: left;
+    margin: 0;
+}
+
+#zoning6 nav
+{
+    background: #4ab3f0;
+    height: 50px;
+    text-align: center;
+}
+
+#zoning6 aside
+{
+    float: left;
+    background: purple;
+    width: 20%;
+}
+
+#zoning6 footer
+{
+    background:#000;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.carre5
+{
+    float: left;
+    width: 50%;
+    height: 100px;
+}
+
+
+.carre3
+{
+    float: left;
+    width: 50%;
+    height: 100px;
+}
+
+.milieu
+{
+    height: 400px;
+    float: left;
+}
+
+/***********************FIN PAGE ZONNING***********************/
