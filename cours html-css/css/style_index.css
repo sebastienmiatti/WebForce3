@@ -61,11 +61,7 @@ strong
 
 
 */
-header
-{
-    background: #2c3e50;
-    height: 175px;
-}
+
 
 nav
 {
@@ -100,10 +96,54 @@ footer
     background:#2980b9;
     height: 50px;
 }
+
+
 /* Fin de la premiere partie (mise en forme de la page) */
+/********************* DEBUT PAGE HEADER *****************************/
+header
+{
+    background: #2c3e50;
+    height: 175px;
+    text-align: center;
+
+}
+
+#logo
+{
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding: 15px;
+}
+
+#slogan
+{
+    width: 50%;
+    float: left;
+}
+
+#reseausociaux
+{
+    width: 25%;
+    float: left;
+}
+
+#reseauSociaux i
+{
+    font-size: 2em;
+    text-align: right;
+    color: lightblue;
+    display: block;
+    padding: 10px 30px 0 0;
+}
+
+
+/********************* FIN HEADER *****************************/
+
 
 
 /********************* DEBUT PAGE TEXTE *****************************/
+
 .monda p
 {
     font-family: 'Monda', sans-serif;
@@ -399,6 +439,7 @@ button:hover
     {
     background: #fca7a7;
     height: 70px;
+    padding: 0;
     }
 
     #zoning1 aside
@@ -429,6 +470,7 @@ button:hover
 {
     background: #8b16f4;
     height: 70px;
+    padding: 0;
 }
 
 #zoning2 aside
@@ -499,6 +541,7 @@ button:hover
     color: white;
     background: blue;
     height: 50px;
+    padding: 0;
     text-align: center;
 }
 #zoning4 nav
@@ -537,6 +580,7 @@ button:hover
     color: white;
     background: blue;
     height: 50px;
+    padding: 0;
     text-align: center;
 }
 
@@ -587,27 +631,29 @@ button:hover
 
 
 
+
 #zoning6
 {
     /*background: yellow;*/
     width: 800px;
-    border: 1px solid;
+    border: 2px solid;
+    margin: 0 auto;
 }
 
 #zoning6 header
 {
     color: black;
     background: #109e04;
-    width: 798px;
     height: 90px;
+    padding: 0;
     text-align: center;
 }
 
 .logo
 {
-background: yellow;
-width: 25%;
-height: 100%;
+    background: yellow;
+    width: 25%;
+    height: 100%;
 }
 
 .logo, .logo1{float: left;}
@@ -618,31 +664,31 @@ height: 100%;
     width:50%;
     height: 100%;}
 
-#zoning6 section
-{
-    width: 80%;
-    height: 200px;
-    text-align: center;
-    padding: 0;
-    float: left;
-    margin: 0;
-    background: red;
-}
-
 #zoning6 nav
 {
     background: #4ab3f0;
     height: 50px;
     text-align: center;
+    border-bottom-color: #4ab3f0;
 }
 
 #zoning6 aside
 {
     text-align: center;
     float: left;
-    background: purple;
+    background: lavender;
     width: 20%;
     height: 750px;
+}
+
+#zoning6 section
+{
+    width: 80%;
+    height: 300px;
+    text-align: center;
+    padding: 0;
+    float: left;
+    margin: 0;
 }
 
 #zoning6 footer
@@ -657,19 +703,20 @@ height: 100%;
     float: left;
     width: 50%;
     height: 100%;
-    background: purple;
 }
 
-#zoning6 section:first-of-type div:last-of-type
-{background: brown;}
-
-
+#zoning6 section:first-of-type div:nth-of-type(1)
+{
+    background: brown;
+}
 
 
 #zoning6 section:last-of-type
-{height: 150px;}
+{
+    height: 150px;
+}
 
-.carre3
+#zoning6 section .carrre
 {
     float: left;
     width: 25%;
@@ -677,8 +724,167 @@ height: 100%;
     height: 100%;
 }
 
-.carre3:nth-of-type(1), .carre3:nth-of-type(3)
-{background: lightgreen;}
+#zoning6 section .carrre:nth-of-type(1), #zoning6 section .carrre:nth-of-type(3)
+{
+    background: lightgreen;
+}
 
+#zoning7
+{
+    /*background: yellow;*/
+    width: 800px;
+    border: 2px solid;
+    margin: 0 auto;
+}
+
+#zoning7 header
+{
+    color: black;
+    padding: 0;
+    height: 90px;
+    text-align: center;
+}
+
+.haut1
+{
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+.haut2
+{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.pink
+{
+    background: pink;
+}
+
+.darkblue
+{
+    background: darkblue;
+}
+
+.haut3
+{
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+#zoning7 nav
+{
+    background: #9a40a4;
+    height: 30px;
+    border: none;
+}
+
+#zoning7 aside
+{
+background: blue;
+width: 20%;
+height: 650px;
+float: left;
+}
+
+#zoning7 section
+{
+width: 80%;
+float: left;
+margin: 0;
+padding: 0;
+}
+
+section.slideshow
+{
+    background: pink;
+    height: 250px;
+}
+
+#zoning7 .a
+{
+    background: red;
+    width: 50%;
+    height: 250px;
+    float: left;
+}
+
+#zoning7 .b
+{
+    background: yellow;
+    width: 50%;
+    height: 250px;
+    float: left;
+}
+
+#zoning7 .c
+{
+    background: green;
+    width: 25%;
+    height: 150px;
+    float: left;
+}
+
+#zoning7 .d
+{
+    background: lavender;
+    width: 25%;
+    height: 150px;
+    float: left;
+}
+
+#zoning7 footer
+{
+    background: purple;
+    height: 50px;
+}
 
 /***********************FIN PAGE ZONNING***********************/
+
+
+
+/***********************DEBUT PAGE TABLEAU***********************/
+main.gerard
+{
+    padding-bottom:50px;
+}
+
+table
+{
+    text-align: center;
+    border: 2px solid;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+thead, tfoot
+{
+    background-color: #e6e6fa;
+    border: 2px solid #6a5acd;
+}
+
+tbody
+{
+border: 1px solid #6a5acd;
+}
+
+td
+{
+    font-size: 100%;
+    border: 1px dotted #6a5acd;
+    text-align: center;
+    padding: 5px; /* Marge intérieur*/
+}
+
+th
+{
+    border: 1px dotted #6a5acd; /* dotted = pointillés*/
+    padding: 4px;
+    background-color: #e6e6fa;
+    width: 25%;
+}
+/***********************FIN PAGE TABLEAU***********************/

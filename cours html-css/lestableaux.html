@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+    <html lang="fr">
+        <head>
+            <meta charset="UTF-8"> <!--en-tête du document -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Ma Page Tableaux</title>
+            <link rel="stylesheet" href="css/style_index.css">
+            <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Monda|Permanent+Marker|Playball" rel="stylesheet">
+            <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+            <meta name="description" content="Mes tableaux en HTML/CSS">
+            <!-- Google s'en seet pour les moteurs de recherches -->
+        </head>
+
+        <body> <!--corps du document-->
+
+            <header>
+                <!-- zone du haut, ex : bannière, logo, slogan-->
+                <div id="logo"><img src="img/logo.png" alt="logo">
+                </div>
+                <div id="slogan"> <h1> Mon premier site en HTML/CSS </h1>
+                </div>
+
+                <div id="reseauSociaux"><i class="fa fa-instagram" aria-hidden="true"></i>
+               <i class="fa fa-twitter" aria-hidden="true"></i>
+               <i class="fa fa-viadeo-square" aria-hidden="true"></i>
+               <i class="fa fa-snapchat" aria-hidden="true"></i>
+               </div>
+               <div class="clear"></div>
+            </header>
+
+            <nav>
+                <!-- zone du menu -->
+            </nav>
+
+            <main class="gerard">
+                <!--contenu principal != selon les pages-->
+                <h2>Tableau</h2>
+                <table><!-- ouverture de mon tableau  -->
+                    <caption><i class="fa fa-fighter-jet" aria-hidden="true"></i> Ventes Paris-Rome
+                    </caption><!-- titre du tableau (cellules fusionnées) -->
+                    <thead><!-- en-tête du tableau -->
+                        <tr><!-- tr = rang (t = tableau / r = row = rangée) -->
+
+                            <thead>
+                                <tr>
+                                  <th></th><!-- th = titres ou entête (t = tableau / h = head = tête) -->
+                                  <th>02/08/2017</th>
+                                  <th>03/08/2017</th>
+                                  <th>05/08/2017</th>
+                                </tr>
+                            </thead>
+
+                                        <tfoot><!-- tfoot = bas/fin du tableau ! les normes du W3C mettent la balise tfoot avant celle du corp du tableau tbody -->
+                                            <tr>
+                                                <!--td = cellules -->
+                                                <td></td>
+                                                <td>02/08/2017</td>
+                                                <td>03/08/2017</td>
+                                                <td>06/08/2017</td>
+                                            </tr>
+                                        </tfoot>
+
+                             <!-- tbody = corp du tableau -->
+                                                     <tbody>
+                                                          <tr>
+                                                             <td rowspan="2">AirFrance</td>
+                                                             <td>Départ 10h.-Arrivée 13h.</td>
+                                                             <td>Départ 15h.-Arrivée 13h.</td>
+                                                             <td>Départ 17h.-Arrivée 13h.</td>
+                                                         </tr>
+
+                                                         <tr>
+                                                            <td>200€</td>
+                                                            <td>180€</td>
+                                                            <td>170€</td>
+                                                         </tr>
+
+                                                         <tr>
+                                                             <td rowspan="2">Alitalia</td>
+                                                             <td>Départ 6h.-Arrivée 9h.</td>
+                                                             <td>Départ 13h.-Arrivée 16h.</td>
+                                                             <td>Départ 21h.-Arrivée 00h.</td>
+                                                         </tr>
+
+                                                         <tr>
+                                                            <td>120€</td>
+                                                            <td>250€</td>
+                                                            <td>100€</td>
+                                                         </tr>
+
+
+                                                     </tbody>
+                        </tr>
+                    </thead>
+
+
+
+
+
+
+                </table>
+
+            </main>
+
+            <footer>
+                <!--zone du bas, ex: liens administratifs, mention légales, plan du site, CGU, CGV, contact, copyright-->
+            </footer>
+
+
+
+
+
+
+
+        </body>
+    </html>
