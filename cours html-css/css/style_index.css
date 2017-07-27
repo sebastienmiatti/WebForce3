@@ -23,6 +23,11 @@ time, mark, audio, video {
 	vertical-align: baseline;
 } /* Reset */
 
+body
+{
+    scroll-behavior: smooth;
+}
+
 h1
 {
     font-size: 45px;
@@ -255,7 +260,6 @@ img[src="img/toureiffel.jpg"]
 /***********************FIN PAGE IMAGE**************************/
 
 
-
 /*********************DEBUT PAGE POSITION***********************/
 
 
@@ -426,6 +430,7 @@ button:hover
     color: white;
 }
 /**********************FIN PAGE POSITION***********************/
+
 
 /**********************DEBUT PAGE ZONNING***********************/
 
@@ -626,10 +631,6 @@ button:hover
     border-radius: 100px;
     background: transparent;
 }
-
-
-
-
 
 
 #zoning6
@@ -846,7 +847,6 @@ section.slideshow
 /***********************FIN PAGE ZONNING***********************/
 
 
-
 /***********************DEBUT PAGE TABLEAU***********************/
 main.gerard
 {
@@ -888,3 +888,107 @@ th
     width: 25%;
 }
 /***********************FIN PAGE TABLEAU***********************/
+
+
+/***********************DEBUT PAGE LISTE***********************/
+ul.fruit /*pas d'espaces tout les elementss sont selectionnée*/
+{
+    list-style-type: none;
+ }
+
+ul.fruit li
+{
+    display: inline;
+    margin: 10px;
+}
+
+li .fa
+{
+    color: #8e9fe6;
+    font-size: 80%;
+}
+
+.imbriquee, .imbriquee ul
+{
+    list-style-type: none;
+    padding-left: 15px;
+    color: blue;
+}
+
+.imbriquee ul li:hover
+{
+    transition: 0.3s;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    background: lavender;
+    color: red;
+}
+.imbriquee
+{
+    margin-bottom: 200px;
+    cursor: pointer;
+}
+
+.imbriquee ul
+{
+ display: none;
+}
+
+.europe:hover ul
+{
+    display: block;
+}
+
+.asie:hover ul
+{
+    display: block;
+}
+
+ol
+{
+    margin-left: 30px;
+}
+
+dl
+{
+    margin-left: 20px;
+}
+/***********************FIN PAGE LISTE***********************/
+
+
+/***********************DEBUT PAGE LIENS***********************/
+.ancre{
+    text-align: center;
+    margin: 10px;
+}
+
+.ancre a
+{
+    margin: 5px;
+    padding: 4px;
+    text-decoration: none;
+    text-align: center;
+    background: #0f1545;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: silver;
+    font-size: 15px;
+    box-shadow: 5px 5px rgba(0,0,0,0.2)
+}
+
+.ancre a:hover
+{
+    transition: 0.5s;
+    background: lavender;
+    color: #0f1545;
+    /*border: 1px solid;*/
+    box-shadow: none;
+}
+
+
+
+
+
+/***********************FIN PAGE LIENS***********************/
