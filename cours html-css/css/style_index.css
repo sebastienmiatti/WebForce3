@@ -890,7 +890,7 @@ thead, tfoot
 
 tbody
 {
-border: 1px solid #6a5acd;
+    border: 1px solid #6a5acd;
 }
 
 td
@@ -1268,13 +1268,6 @@ iframe[allowfullscreen]
 
 
 
-
-
-
-
-
-
-
                 /*******INFO BULLE *********/
 
             /*******Image grayscale & blur *********/
@@ -1421,7 +1414,53 @@ background: linear-gradient(#324040, #627878);
         to{transform: rotate(-360deg);}
 
 }
-            /********* Menu Rotation *********/
+/********* Menu Rotation *********/
 
 
 /*******************************FIN PAGE ANIMATION **************************/
+
+
+
+
+
+
+/**********************début du RESPONSIVE******************************/
+
+
+/** entre 580px et 780 px, le main fera 550px**/
+@media screen and (max-width:580px)
+{
+
+    header{
+    width:100%;
+    }
+
+    #logo img{
+    width: 40%;
+    }
+
+    header#slogan
+    {
+    font-size: 20%;
+    width: 20%;
+
+    }
+
+    section{
+    width: 100%;
+    }
+
+    h1{
+        font-size: 1.8em;
+        margin: 2px auto;
+    }
+    #reseauSociaux i
+    {
+        font-size: 1em;
+    }
+
+    nav
+    {
+        width: 100%
+    }
+}
