@@ -1,9 +1,244 @@
-header
+*
 {
-background: cyan;
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+} /* Reset */
+
+body
+{
+    scroll-behavior: smooth;
 }
 
+header
+{
+    height: 200px;
+    margin: 0 auto;
+}
+
+h1
+{
+    font-size: 45px;
+    color: #2980b9;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Playball', cursive;
+}
+
+h2
+{
+    font-size: 35px;
+    color: #2c3e50;
+    padding: 20px;
+    font-weight: bold;
+}
+
+h3
+{
+    font-size: 22px;
+    color: #2c3e50;
+    padding: 15px;
+}
+
+blockquote
+{
+    font-style: italic;
+    font-size: 120%;
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+main
+{
+    background: #ecf0f1; /* pas de hauteur car il contient aside et section donc il se dimension selon eux*/
+    width: 1000px;
+    margin: 0 auto;
+}
+
+aside
+{
+    height:250px;
+    background: yellow;
+}
+
+section
+{
+    height: 600px;
+    background: green;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+footer
+{
+    background:#2980b9;
+    height: 50px;
+}
+
+#zoneDuHaut
+{
+    width: 100%;
+    height: 30px;
+    background: #282A2B;
+}
+
+#contact p
+{
+    margin: auto;
+    padding: 6px;
+    float:left;
+    color: #95938C;
+}
+
+.reseauSociaux
+{
+    width: 30%;
+    float: right;
+    padding-left: 272px;
+    text-align: center;
+
+}
+
+.reseauSociaux i
+{
+    font-size: 1.6em;
+    color: #95938C;
+    padding: 3px 3px 0 0;
+    margin: 0 7px;
+
+}
+
+.reseauSociaux i:nth-child(1):hover
+{
+    background: white;
+    color: black;
+    border-radius: 3px;
+}
+
+.reseauSociaux i:nth-child(2):hover
+{
+    background: #32ADC7;
+    border-radius: 3px;
+}
+
+.reseauSociaux i:nth-child(3):hover
+{
+    background: #f1dc1e;
+    border-radius: 3px;
+}
+
+.reseauSociaux i:last-of-type:hover
+{
+    background: #32ADC7;
+    border-radius: 3px;
+}
+
+
+
+               /****************** Fin du HEADER ******************/
+               /****************** Début du MENU ******************/
+#zone_du_haut
+{
+    height: 90px;
+}
 nav
 {
-    background:blue;
+   background: rgba(27, 167, 190, 0.7);
+   border-bottom: 4px solid purple;
+   text-align: center;
 }
+
+nav a
+{
+   display: inline-block;
+   padding: 3px 8px 5px 9px;
+   margin: 9px 11px;
+   background: #254b62;
+   border-radius: 20px;
+   box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+   color: #77abb7;
+   text-decoration: none;
+}
+
+nav a:hover
+{
+color: #254b62;
+background: #77abb7;
+box-shadow: none;
+}
+
+.name
+{
+    float: left;
+    width: 30%;
+    height: 70px;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.activ
+{
+   background: black;
+   color: #77abb7;
+}
+
+
+
+
+.clear
+{
+    clear: both;
+}
+
+
+
+
+
+
+
+
+               /****************** Fin du MENU ******************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               /****************** Début du HEADER ******************/
+               /****************** Fin du HEADER ******************/
+               /****************** Début du HEADER ******************/
+               /****************** Fin du HEADER ******************/
+               /****************** Début du HEADER ******************/
+               /****************** Fin du HEADER ******************/
