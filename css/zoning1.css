@@ -26,12 +26,8 @@ time, mark, audio, video {
 body
 {
     scroll-behavior: smooth;
-    margin: 1px auto;
 }
 
-header
-{
-}
 
 h1
 {
@@ -83,8 +79,7 @@ aside
 
 section
 {
-    height: 600px;
-    background: green;
+    background: #b4bebd;
     margin-top: 50px;
     padding: 20px;
 }
@@ -98,40 +93,44 @@ footer
 #zoneDuHaut
 {
     width: 100%;
-    height: 30px;
     background: #282A2B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 #contact
 {
-    width: 90%;
+    width: 65%;
+    padding: 0 10px;
 }
 
 #contact p
 {
     margin: auto;
-    padding: 3px 6px;
-    float:left;
+    padding: 3px 10px;
     color: #95938C;
+    display: inline-block;
 }
 
 .reseauSociaux
 {
-    width: 12%;
-    float: right;
+    width: 33%;
+    text-align: right;
 }
 
 .reseauSociaux i
 {
-    font-size: 1.6em;
+    font-size: 1.8em;
     color: #95938C;
-    padding: 2px 2px 0 0;
-    margin: 0 10px;
+    /*margin: 0 10px;*/
+    letter-spacing: 20px;
+    text-align: center;
 }
 
 .reseauSociaux i:nth-child(1):hover
 {
-    background: white;
-    color: black;
+    background: url(img/4.jpg) no-repeat;
     border-radius: 3px;
     transition: 0.3s;
     transform: scale(1.5);
@@ -167,24 +166,47 @@ footer
 
                /****************** Fin du HEADER ******************/
                /****************** Début du MENU ******************/
+#zone_du_haut
+{
+   background: #333637;
+   width: 100%;
+   height: 15vh;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.name
+{
+    width: 30%;
+    padding: 26px 7px;
+
+}
+
+.name p
+{
+    color: #41CCE3;
+    font-size: 2.2em;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
 nav
 {
-   text-align: center;
-   width: 34%;
-   float: left;
-   margin-top: 3px;
+   margin-top: -2px;
 }
 
 nav a
 {
-   padding: 4px 12px 8px 10px;
-   margin: 9px 11px;
-   background: #254b62;
-   border-radius: 20px;
-   box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
-   color: #41CCE3;
-   text-decoration: none;
+    display: inline-block;
+    padding: 4px 12px 8px 10px;
+    margin: 9px 11px;
+    background: #254b62;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+    color: #41CCE3;
+    text-decoration: none;
 }
 
 nav a:hover
@@ -193,7 +215,6 @@ nav a:hover
     color: white;
     background: #41CCE3;
     box-shadow: none;
-
 }
 
 nav ul li
@@ -202,41 +223,13 @@ nav ul li
     float: left;
 }
 
-#zone_du_haut
-{
-    background: #333637;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
-    flex-direction: row;
 
-}
-
-.name
-{
-    width: 20%;
-    height: 115px;
-    padding: 26px 7px;
-}
-
-.name p
-{
-    color: #41CCE3;
-    font-size: 2.8em;
-    letter-spacing: 3px;
-    font-weight: bold;
-}
 
 .activ
 {
    background: black;
    color: #77abb7;
 }
-
-
-
 
 .clear
 {
@@ -260,22 +253,22 @@ button:hover
     transition: 1.5s;
     color: #33cccc;
 }
+  /************************FIN MENU *************************************/
 
-section#zoneHaut
+  /****************** section apres menu (photo)**************************/
+
+#zoneHaut
 {
-    height: 197px;
     width: 100%;
     background: #41CCE3;
-    position: relative;
     margin: 0;
+    padding: 0;
 }
 
 .photoFond
 {
-     padding-left: 0;
-     padding-right: 0;
-     width: 37%;
-     height: 100%;
+     width: 20%;
+     position: relative;
 }
 
 .photoFond img
@@ -284,6 +277,7 @@ section#zoneHaut
     z-index: 1;
     width: 100%;
     border-radius: 15px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
 }
 
 .photoTexte
@@ -315,8 +309,8 @@ section#zoneHaut
     width: 210px;
     margin: auto;
     background: rgba(255,255,255,.2);
-    left: 84px;
-    top: 107px;
+    left: 91px;
+    top: 149px;
     padding: 6px;
     border-radius: 56px;
     font-weight: bold;
@@ -359,14 +353,24 @@ span.blink_me {
     100% { opacity: 1.0; }
 }
 
+      /****************** Fin du section apres menu ******************/
+        /********************** DEBUT SECTION ***********************/
+        /********************** FIN SECTION ***********************/
+.premiere
+{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    height: 30vh;
+}
 
-
-
-
-
-               /****************** Fin du MENU ******************/
-
-
+.separation
+{
+    width: 100%;
+    height: 20px;
+    background: #282A2B;
+    clear: both;
+}
 
 
 
