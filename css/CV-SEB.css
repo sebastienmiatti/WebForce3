@@ -26,8 +26,16 @@ time, mark, audio, video {
 body
 {
     scroll-behavior: smooth;
+    margin: 5px 400px;
+    background: url(../img/choisir/fond012.jpg) fixed;
+    box-sizing: border-box;
 }
 
+#container
+{
+
+
+}
 
 h1
 {
@@ -67,7 +75,7 @@ strong
 main
 {
     background: #ecf0f1; /* pas de hauteur car il contient aside et section donc il se dimension selon eux*/
-    width: 1000px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -79,15 +87,14 @@ aside
 
 section
 {
-    background: #b4bebd;
-    margin-top: 50px;
+    background: white;
     padding: 20px;
 }
 
 footer
 {
-    background:#50A3D9;
-    height: 50px;
+    background: #41CCE3;
+    width: 100%;
 }
 
 #zoneDuHaut
