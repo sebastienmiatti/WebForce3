@@ -62,8 +62,7 @@
                                     Developpeur/Intégrateur Web Junior
                                 </span>
                             </p>
-                        </a>
-                        </div>
+                        </div></a>
                         </div>
                         <div class="clear"></div>
                         <div class="description">
@@ -141,14 +140,23 @@
                         <i class="fa fa-desktop white" aria-hidden="true"></i>
                         informatique <i class="fa fa-desktop white" aria-hidden="true"></i>
                     </h2>
-                    <h3>-Langages :</h3>
-                    <p>html</p>
-                    <p>css</p>
-                    <p>JQuery</p>
-                    <p>php</p>
-                    <p>mySql</p>
-                    <p>JavaScript</p>
-                    <p>Bootstrap</p>
+                        <div class="contenti">
+                            <div class="col">
+                            <h3>Langages:</h3><br>
+                                <ul id="skill">
+                                    <li><span class="expand html"></span><em>HTML</em></li>
+                                    <li><span class="expand css"></span><em>CSS </em></li>
+                                    <li><span class="expand jquery"></span><em>JQuery</em></li>
+                                    <li><span class="expand php"></span><em>PHP</em></li>
+                                    <li><span class="expand mysql"></span><em>mySql</em></li>
+                                    <li><span class="expand javascript"></span><em>JavaScript</em></li>
+                                    <li><span class="expand bootstrap"></span><em>Bootstrap</em></li>
+                                    <li><span class="expand photoshop"></span><em>Photoshop</em></li>
+                                    <li><span class="expand atom"></span><em>Atom</em></li>
+                                    </ul>
+                            </div>
+                        </div>
+                    <div class="conteneur">
                     <h3>-Système d'exploitation :</h3>
                     <p>Windows (10,7, Vista, XP)
                     <p>Unix (Linux Ubuntu, Macintosh, Openbsd) </p>
@@ -160,40 +168,91 @@
                     <p>Photoshop CS, Satori, Sunlite, Wamp </p>
                     <h3>Maintenance et réparation informatique :</h3>
                     <p>Montage et démontage PC, prise en main à distance, installation, paramétrage, hardware, software.</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+
                 </section>
 
-                <div class="contenti">
-                <div class="col">
-                <h2>My Skill</h2>
-                <ul id="skill">
-                <li><span class="expand html5"></span><em>HTML 5</em></li>
-                <li><span class="expand css3"></span><em>CSS 3</em></li>
-                <li><span class="expand jquery"></span><em>jQuery</em></li>
-                <li><span class="expand photoshop"></span><em>Photoshop</em></li>
-                <li><span class="expand dreamweaver"></span><em>Dreamweaver</em></li>
-                </ul>
-                </div>
-                </div>
+
 
                     <div class="separation1"></div>
                     <div class="separation"></div>
                     <div class="separation1"></div>
 
 
+            </main>
+                <footer >
 
-                <footer id="contact_cv">
+                    <div id="contact_cv">
+                    <div class="formu">
+
+                    <form method="post" action="url de destination" enctype="multipart/form-data">  <!--post ou get  les données circulent de tels manière// enctype envoie de fichier correctement-->
+
+                        <label for="homme">M.</label>
+                        <input type="radio" id="homme" name="genre" value="homme">
+
+                        <label for="femme">Mme</label>
+                        <input type="radio" id="femme" name="genre" value="femme">
+
+                        <label for="mademoiselle">Mlle</label>
+                        <input type="radio" id="mademoiselle" name="genre" value="mademoiselle"><br><hr><br>
+
+                        <label for="pseudo"></label> <!--le label va toujours avec input-->
+                        <input type="text" id="pseudo" name="pseudo" placeholder=" Pseudo*" class="arrondie" required> <!--(text/pwd/email/file)-->
+
+                        <label for="nom"></label> <!--le label va toujours avec input-->
+                        <input type="text" id="nom" name="nom" placeholder=" nom*" class="arrondie" required><br><br> <!--(text/pwd/email/file)-->
+
+                        <label for="prenom"></label> <!--le label va toujours avec input-->
+                        <input type="text" id="prenom" name="prenom" placeholder=" prenom*" class="arrondie" required>
+
+                        <label for="email"></label> <!--le label va toujours avec input-->
+                        <input type="email" id="email" name="email" placeholder=" Email" class="arrondie" required><br><br> <!--(text/pwd/email/file)-->
+
+                        <label for="cp"></label> <!--le label va toujours avec input-->
+                        <input type="text" id="cp" name="cp" placeholder=" Code Postal" maxlength="5" pattern="[0-9]{5}" class="arrondie" title="5 chiffres entre 0 et 9"><br><br><hr>
+
+                        <label for="cv">Importez Votre projet</label> <!--le label va toujours avec input-->
+                        <input type="file" id="cv" name="cv"><br><br> <!--(text/pwd/email/file)-->
+
+                        <label for="message">Commentaire :</label><br>
+                        <textarea id="message" name="message" rows="10" cols="40" class="arrondie"></textarea><br><br>
+
+                        <input type="submit" name="envoyer" value="Envoyer">
+                        <input type="reset" name="annuler" value="annuler">
+
+                    </form>
+                </div>
+                    <div class="groupe">
+                        <div class="RSO">
+                            <a href="https://www.instagram.com/tchikito97/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com/SebTchikito" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/s%C3%A9bastien-miatti-7b6586145/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/Miattisebastien/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
                     <div class="bas">
-                    <h3>Contacts/Cv</h3>
-                    <a href="lib/cv.doc"><p><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                    Télécharger mon CV</p></a>
-                    <a href="lib/cv.pdf" target="_blank" title="afficher dans un nouvel onglet"><p><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                    Voir mon CV</p></a></div><br>
+                        <h3>Contacts/Cv :</h3>
+                        <a href="lib/cv.doc"><p><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        Télécharger mon CV</p></a>
+                        <a href="lib/cv.pdf" target="_blank" title="afficher dans un nouvel onglet"><p><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                        Voir mon CV</p></a>
+                    </div><br>
+                    <div class="clear"></div>
+
+                    <p class="white align"><i class="fa fa-copyright white" aria-hidden="true"></i>
+                     Tous Droit Réservés <i class="fa fa-copyright white" aria-hidden="true"></i>
+                     Miatti Sébastien
                 </footer>
 
 
-                    </main>
 
-                    <div class="separation"></div>
+
                     </div>
             </body>
     </html>
