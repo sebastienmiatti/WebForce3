@@ -302,7 +302,7 @@ button:hover
     font-weight: bold;
     float: left;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 2px 20px;
     background: rgba(0,0,0,0.6)
 }
 
@@ -358,7 +358,7 @@ span.blink_me {
     width: 70%;
     /*padding: 136px 544px;*/
     text-align: justify;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.7);
     border-radius: 40px;
     padding: 0 86px;
     margin: 107px 230px;
@@ -507,6 +507,7 @@ text-decoration: underline;
         background: url(../img/logors.jpg) no-repeat 97% 14px;
         background-size: 47px 37px;
         float: right;
+
     }
 
     .hidden
