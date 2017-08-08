@@ -1,0 +1,62 @@
+string
+var str= "ma chaine de caractères" + "deuxième partie";
+
+number
+float (nombre a virgule)
+int (nombre entier)
+
+boolean
+(true ou false) (test sur valeur ou retour de fonction)
+
+array
+object
+
+var my arr = ["pomme,"banane","figue"];
+
+var myObject= 
+{
+"nom": "miatti",
+"prenom":"sebastien",
+"age": 27,
+};
+ 
+alert(myArr[1]); // > renvoi "banane"
+myArr.length // > nombre d'éléments dans le tableau
+
+myObject.prenom // > renvoie la valeur de la propriété prénom de l'object my Object
+myObject["prenom"] // idem
+
+opérateurs
+ + - * / %
+
+2+5 //> renvoie 7
+2-5 //> renvoie -3
+2*5 //> renvoie 10
+2/5 //> renvoie 0.4
+2%5 //> renvoie 2
+
+ fonctions
+function myFunction (myArg1,myArg2)
+{
+// instructions qui vont être exécutées à l'appel de la fonction
+}
+// Appel
+myFunction (2, 56);
+ 
+function returning (){
+		return "bonjour";
+}
+// on stocke la valeur de retour de la fonction returning dans la variable myVar
+var myVar= returning();
+
+fonction calculate (value1, value2){
+	return value1 + value 2 ;
+}
+
+result1 = calculate(1, 7);
+result2 = calculate(13, 7);
+
+alert(result1);
+
+var myVar2;
+myVar2 = 2;
