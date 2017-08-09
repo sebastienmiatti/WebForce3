@@ -60,3 +60,78 @@ alert(result1);
 
 var myVar2;
 myVar2 = 2;
+
+
+les conditions
+
+if ( conditions) {
+ //instructions
+}
+
+
+if(conditions){
+ //instructions
+} else{ 
+ // instructions si les conditions ne sont pas respectées
+}
+
+
+if (conditions){
+ //instructions
+}else if (conditions2){
+ //instructions si les conditions ne sont pas respectée et que les conditions2 sont respectées.
+
+operateurs de comparaison
+	< > <= >=   ///supérieur, inferieur, supérieur ou egal inférieur ou égal à
+0 < 21 // renvoie true
+0 < 0 // renvoie false
+0 > -7 // renvoie true
+0 > 21 // renvoie false
+0 > 0 // renvoie false
+0 <= 0 // renvoie true
+0 >= 0 // renvoie true
+
+
+== égalité
+
+1 == 1  //renvoie
+1 == 0  // renvoie false
+1 == "1" // renvoie true
+
+
+=== égalité stricte
+
+1 === 1  // renvoie true
+1 === "1" // renvoie false
+1.0 === 1 // renvoie false
+
+
+!= (inégalité)
+
+1 != 1 // renvoie false
+1 != 0 // renvoie true
+1 != "1" // renvoie false
+ 
+!== (inégalité stricte)
+
+1 !== 1 // renvoie false
+1 !== "1" // renvoie true
+1 !== 1.0 // renvoie true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
