@@ -118,6 +118,132 @@ operateurs de comparaison
 1 !== "1" // renvoie true
 1 !== 1.0 // renvoie true
 
+typeof 1 // renvoie "number"
+typeof "bonjour" // renvoie "string"
+typeof myVar // renvoie "undefined" (la variable myVar est vide ou non définie)
+
+opérateurs logiques
+
+&& 
+if (condition1 && condition2) {
+// instructions exécutées si les deux conditions renvoie true
+}
+
+||
+if (condition1 || condition2) {
+// insttructions exécutées si au moins une des deux conditions renvoie true
+}
+
+if((condition1 || condition2) && (condition3 || condition4)){
+  // si conditions 1 et/ou conditions 2 renvoient true ET condition 3 et /ou conditions 4 renvoient true
+}
+
+
+!
+if (condition) {
+// s'exécute si conditions est false
+}
+if (condition == false){}
+if(condition != true){}
+
+if(!(condition1 || condition2)){
+ // si aucune des conditions n'est true
+}
+
+var i = 0;
+i = i + 1;// i = 1
+i +=1; // i = 2
+i ++; // i = 3
+i += 2; // i = 5
+i = i - 1 ; // 4
+i -= 1; // 3
+i--; // 2
+i *= 2; // 4
+i /= 2; // 2
+i %= 2; // 0
+
+ la boucle la plus simple c'est la boucle while (tant que)
+
+var j = 0;
+while (j < 10){ //tant que j est inférieur a 10
+	j++; //j'incrémente j de 1
+}
+
+for (i = 0; i < 10; i++){
+}
+
+var myArr = ["chat", "chien", "loutre", "poney"]
+for (item in myArr){ // pour chaque 
+alert(item);
+}
+
+var myObject = {"nom" : "Miatti" , prenom : "Sébastien"}
+ for (property in myObject) { // pour chaque propriété de l'objet
+alert(property); // affiche le nom de la propriété
+alert(myObject[property]); // affiche la valeur de la propriété
+}
+
+for (i = 0; i < myArr.length; i++) { // pour chaques entré dans le tableau myArr
+	alert (myArr[i]);
+}
+
+switch    // vérifie tout le temps une égalité; connaitre les valeurs de variables
+
+var word ="pomme";
+switch (word) { // on teste la valeur de word
+	case "banane":     // if (word == "banane")
+	break;  
+	case "pomme":    // else if (word == "pomme")
+	break;
+	default:      // cas par defaut (else)
+	break;
+}
+
+
+// portée (scope) des variables / fonctions
+
+// scope : window
+
+war myVar; // variable globale : accessible dans toute la page
+
+function myFunc () { // fonction globale
+	var var2; // variable locale : accessible uniquement dans la fonction 
+	var3; // variable globale
+}
+
+///////////////////////////////////
+
+
+var myString = "test"; // équivalent de window.myString = "test"
+
+function myFunc (myString) {
+	alert(myString);
+}
+
+myFunc ("pomme"); // alert "pomme"
+
+function func2 () {
+	var myString = "retest";
+	alert(window.myString); // correspond à la variable globale ("test")
+	alert(myString); // correspond a la variable locale ("retest") 
+}
+
+
+
+
+
+
+
+
+
+for array.length
+
+switch
+
+onclik
+onchange
+
+
 
 
 

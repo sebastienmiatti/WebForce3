@@ -27,6 +27,16 @@ window.onload = function (){
                 // on bloque l'évènement par defaut de l'évenement
                 e.preventDefault();
 
-                alert(1);
+                // on teste la valeur du champ myField
+                if (myField.value == "bonjour"){
+                        //si la valeur est "bonjour"
+                        alert("Bienvenue")
+                } else if (parseFloat(myField.value) == myField.value ){
+                        //si la valeur est un nombre
+                        alert("chiffre");
+                } else{
+                        // cas par defaut
+                        alert("erreur");
+                }
         });
 };
