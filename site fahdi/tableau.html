@@ -1,0 +1,95 @@
+<!Doctype html>
+<html lang="fr">
+	<head><!--En-tête du document-->
+		<title>Ma page tableau</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Lemonada|Open+Sans+Condensed:300|Roboto+Condensed" rel="stylesheet"> 
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<meta name="description" content="Mon tableau en HTML/CSS">
+		<!--Les moteurs de recherches s'en servent pour les recherches-->
+		<meta charset="utf-8">
+		
+	</head>
+	
+	<body><!-- Corps du document-->
+		<header>
+			<!--Zone du haut, ex : bannière, logo, slogan-->
+			<div id="logo">
+				<img src="img/logo.png" alt="logo">
+			</div>
+			<div id="slogan">
+				<h1>Mon premier site en HTML / CSS</h1>
+			</div>
+			<div id="reseauSociaux">
+				<i class="fa fa-facebook-square" aria-hidden="true"></i>
+				<i class="fa fa-twitter-square" aria-hidden="true"></i>
+			</div>
+			<div class="clear"></div>
+		</header>
+		
+		<nav>
+			<!--Zone du menu, les liens pour naviguer sur le site-->
+		</nav>
+		<main>
+			<h2>Tableau</h2>
+			<section class="tableau">
+				<table>
+					<caption><i class="fa fa-plane" aria-hidden="true"></i> Vols Paris Rome</caption>
+					<thead>
+						<tr>
+							<th></th>
+							<th>02/08/2017</th>
+							<th>03/08/2017</th>
+							<th>05/08/2017</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<th></th>
+							<th>02/08/2017</th>
+							<th>03/08/2017</th>
+							<th>05/08/2017</th>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<th rowspan="2">Air France</th>
+							<td>Départ 10h - Arrivée 13h</td>
+							<td>Départ 15h - Arrivée 18h</td>
+							<td>Départ 17h - Arrivée 20h</td>
+						</tr>
+						<tr>
+							<td>200€</td>
+							<td>180€</td>
+							<td>170€</td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<th rowspan="2">Alitalia</th>
+							<td>Départ 6h - Arrivée 9h</td>
+							<td>Départ 13h - Arrivée 16h</td>
+							<td>Départ 21h - Arrivée 00h</td>
+						</tr>
+						<tr>
+							<td>120€</td>
+							<td>250€</td>
+							<td>100€</td>
+						</tr>
+					</tbody>
+					
+				</table>
+			
+			</section>
+		</main>
+		<footer>
+			<!--zone du bas, ex : liens administratifs, mentions légales, plan du site, CGU, CGV, contact, copyright-->
+		</footer>
+	</body>
+
+</html>
+
+
+
+
+

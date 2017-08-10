@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <html lang="fr">
+        <head>
+            <meta charset="UTF-8"> <!--en-tête du document -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Ma page formulaire</title>
+            <link rel="stylesheet" href="css/style_index.css">
+            <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Monda|Permanent+Marker|Playball" rel="stylesheet">
+            <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+            <meta name="description" content="Ma page formulaire en HTML/CSS">
+            <!-- Google s'en seet pour les moteurs de recherches -->
+        </head>
+
+        <body> <!--corps du document-->
+
+            <header>
+                <!-- zone du haut, ex : bannière, logo, slogan-->
+                <a href="index.html"><div id="logo"><img src="img/logo.png" alt="logo">
+                </div></a>
+                <div id="slogan"><h1> Mon premier site en HTML/CSS </h1>
+                </div>
+
+                <div id="reseauSociaux">
+               <i class="fa fa-instagram" aria-hidden="true"></i>
+               <i class="fa fa-twitter" aria-hidden="true"></i>
+               <i class="fa fa-facebook-square" aria-hidden="true"></i>
+               <i class="fa fa-snapchat" aria-hidden="true"></i>
+               </div>
+               <div class="clear"></div>
+            </header>
+
+            <nav>
+                <!-- zone du menu -->
+
+                    <a href="index.html">Structure</a>
+                    <a href="text.html">Texte</a>
+                    <a href="selecteur.html">Selecteurs</a>
+                    <a href="images.html">Images</a>
+                    <a href="positions.html">Position</a>
+                    <a href="le_zoning.html">Zoning</a>
+                    <a href="lestableaux.html">Tableau</a>
+                    <a href="leslistes.html">Liste</a>
+                    <a href="lesliens.html">Lien & Menu</a>
+                    <a href="lesformulaires.html" class="activ">Formulaire</a>
+                    <a href="multimedia.html">Multimédia</a>
+                    <a href="animations.html">Animations</a>
+
+            </nav>
+
+            <main>
+                <a href="#logo"><button type="button"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button></a>
+                <h2>Les formulaires</h2>
+                    <section class="formulaire">
+                        <h3>formulaire</h3>
+                    <form method="post" action="url de destination" enctype="multipart/form-data">  <!--post ou get  les données circulent de tels manière// enctype envoie de fichier correctement-->
+                        <label for="pseudo"></label> <!--le label va toujours avec input-->
+                        <input type="text" id="pseudo" name="pseudo" placeholder=" Pseudo*" class="arrondie" required> <!--(text/pwd/email/file)-->
+
+                        <label for="mdp"></label> <!--le label va toujours avec input-->
+                        <input type="password" id="mdp" name="mdp" placeholder=" Mot de Passe" class="arrondie"><br><br> <!--(text/pwd/email/file)-->
+
+                        <label for="nom"></label> <!--le label va toujours avec input-->
+                        <input type="text" id="nom" name="nom" placeholder=" nom*" class="arrondie" required> <!--(text/pwd/email/file)-->
+
+                        <label for="prenom"></label> <!--le label va toujours avec input-->
+                        <input type="text" id="prenom" name="prenom" placeholder=" prenom*" class="arrondie" required><br><br>
+
+                        <label for="email"></label> <!--le label va toujours avec input-->
+                        <input type="email" id="email" name="email" placeholder=" Email" class="arrondie"><br><br> <!--(text/pwd/email/file)-->
+
+                        <label for="cv">CV</label> <!--le label va toujours avec input-->
+                        <input type="file" id="cv" name="cv"><br><br> <!--(text/pwd/email/file)-->
+
+                        <p>quels sont vos fruits préférés ?</p>
+                        <label for="orange">Orange</label>
+                        <input type="checkbox" id="orange" name="orange" value="orange">
+
+                        <label for="fraise">Fraise</label>
+                        <input type="checkbox" id="fraise" name="fraise" value="fraise">
+
+                        <label for="Poire">Poire</label>
+                        <input type="checkbox" id="Poire" name="poire" value="Poire"><br><br>
+
+                        <label for="cp"></label> <!--le label va toujours avec input-->
+                        <input type="text" id="cp" name="cp" placeholder=" Code Postal" maxlength="5" pattern="[0-9]{5}" class="arrondie" title="5 chiffres entre 0 et 9"><br><br>
+
+                        <label for="message">Commentaire :</label><br>
+                        <textarea id="message" name="message" rows="10" cols="40" class="arrondie"></textarea><br><br>
+
+                        <input type="submit" name="envoyer" value="Envoyer">
+                        <input type="reset" name="annuler" value="annuler">
+
+
+                    </form>
+                </section>
+
+
+
+            </main>
+
+            <footer>
+                <!--zone du bas, ex: liens administratifs, mention légales, plan du site, CGU, CGV, contact, copyright-->
+            </footer>
+
+
+
+
+
+
+
+        </body>
+    </html>
