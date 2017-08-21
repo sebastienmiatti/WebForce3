@@ -109,3 +109,76 @@ transition: 2s;
 
     }
 }
+
+
+
+/* a copier*/ 
+
+.mainMenu
+{
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 0 3px 5px #ececec;
+}
+
+.menu
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 0;
+    overflow-y: hidden;
+    text-align: center;
+}
+
+
+
+label.menuTitle
+{
+    text-align: left;
+    font-size: 20px;
+    height: 40px;
+    width: 30px;
+    margin-right: 1%;
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+    background: url(../img/menu.png) no-repeat 97% 10px;
+    background-size: 24px 19px;
+    float: right;
+}
+
+.hidden
+{
+    display: none;
+}
+
+
+input[name="panel"]:checked ~ .menu
+{
+    max-height: 800px;
+    transition: 2s;
+}
+ 
+ 
+ @media screen and (min-width:970px)
+ {
+     label.menuTitle{
+     display: none;
+     }
+     .menu, .menu li{
+         padding: 2%;
+         box-sizing: border-box;
+     }
+     .menu li, .menu a{
+         display: inline;
+         border: none;
+ 
+     }
+ }
