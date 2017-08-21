@@ -1,0 +1,56 @@
+                            /*----- RESET------ */
+@charset "UTF-8";
+
+*{
+margin: 0;
+padding: 0;
+border: 0 none;
+outline: 0 none;
+}
+
+
+                            /*----- RESET------ */
+
+.dropdown-wrapper{
+    padding: .25rem .5rem;
+    border: 1px solid black;
+    margin: auto;
+    width: 800px;
+}
+
+.dropdown-wrapper h2 {
+    border-bottom: 1px solid black;
+    text-align: center;
+
+}
+
+.dropdown-content{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+                    /*****       POPIN     *****/
+
+.shadow{
+    background-color : rgba(0,0,0, .5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+
+.popin-content{
+    background-color: white;
+    border-radius: 7px;
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1rem; 
+}
