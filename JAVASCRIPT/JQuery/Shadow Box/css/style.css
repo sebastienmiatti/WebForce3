@@ -84,6 +84,10 @@ body{
     width: 600px;
     float: left;
     background: black;
+    line-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slide img{
@@ -101,6 +105,6 @@ body{
 
 .slider-nav a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 3rem;
 }

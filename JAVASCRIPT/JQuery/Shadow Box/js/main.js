@@ -1,48 +1,66 @@
 $(function(){
-    var sliders = $("#thumbnail-wrapper");
 
-    sliders.each(function(){
-        //pour chaques éléments contenu dans le tableau sliders
-        var container = $(this).find("#thumbnail-wrapper"); // contient l'enfant .slide-container du slider
+         /****** DECLARATION DES VARIABLES ********/
+         var slider = $("#slider-wrapper");
+         var slideContainer = $("#slide-container");
+         var slides = $(".slide");
+         var isMoving = false;
 
-        var slides = $(this).find(".slide"); // contient la liste des éléments .slide qui sont dans le sliders
+        /****** DECLARATION DES FONCTIONS *******/
+        var move = function (direction){
+                if (direction == "next"){
+                        // on vérifie que le conteneur n'est pas positionné sur le dernier élément
+                        if(slideContainer.position().left > -(slides.length - 1) * 600 && !isMoving){
+                                isMoving = true;
+                                slideContainer.animate({"left" : "-=600"}, function(){
+                                isMoving = false;
+                                });
+                        }
+                }else {
+                        //on vérifie que el contenaur n'est pas positionné sur le premier élément
+                        if(slideContainer.position().left < 0 && !isMoving){
+                                isMoving = true;
+                                slideContainer.animate({"left" : "+=600" }, function(){
+                                isMoving = false;
+                                });
 
-        var containerWidth = slides.length * 300;
+                        }
+                }
+        };
 
-        var isMoving = false; // variable de blocage pour savoir si l'animation est en cours ou non
 
-        container.css("width", containerWidth);// initialisation du slider a 0
+        /****** DECLARATION DES ECOUTEURS D'EVENEMENT ******/
+         $(".open-slider").on("click", function(e){
+                 e.preventDefault();
+                 var slideNumber = $(this).data("slide"); // index du slide a afficher
+                 // var slideNember = $(this).attr("data-slide");
 
-        // on ajoute les écouteurs d'évènements pour gérer la navigation
-        $(this).find("#thumbnail-wrapper").on("click", function(e){
-            e.preventDefault();
-            //alert('backward');
-            if(container.position().left < 0 && !isMoving){
-                isMoving = true; //l'animation commence
-            container.animate({"left": "+=300"}, function(){
-                //fonction de callback de la fonction animate
-                //alert('fini');
-                isMoving = false; // l'animation est terminée
+                 var containerLeft= slideNumber * 600; // calcule la position du slide cible
 
-            });
-        }
+                 slideContainer.css({"left" : -containerLeft}); // déplace le slider à la position du slide cible
+
+                 $("#shadow").fadeIn();
+
+         });
+
+        $("#shadow").on("click", function(e){
+                var target = $(e.target); //récumpère la cible de l'évènement
+                if( target.is("#shadow")){ // vérifie si la cible de l'évènement correspond au selecteur #shadow
+
+                        $(this).fadeOut();
+                }
         });
 
-        $(this).find("btn-next").on("click", function(e){
-            e.preventDefault();
-            //alert('forward');
-            if(container.position().left > -(slides.length-1)*300 && !isMoving){
-                isMoving = true;
-            container.animate({"left": "-=300"},  function(){
-                //fonction de callback de la fonction animate
-                //alert('fini');
-                isMoving = false;
+        $(".btn-prev, .btn-next").on("click", function(e){
+                e.preventDefault();
 
-            });
-        }
+                var direction = $(this).data("direction");
 
+                move(direction);
         });
 
+        /****** EXECUTION *******/
+        var containerWidth = slides.length * 600;
+        slideContainer.css({"width" : containerWidth});
 
-    });
 });
