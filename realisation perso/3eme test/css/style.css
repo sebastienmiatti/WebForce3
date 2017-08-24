@@ -1,0 +1,204 @@
+*
+{
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+} /* Reset */
+
+html, body
+{
+    margin: 0;
+    position: relative;
+    width : 100%;
+    height : 100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Lobster|Proza+Libre');
+
+                           /***** RESET *****/
+                   /*** MISE EN PAGE GENERAL ONE PAGE ***/
+
+#main-header{
+   background : aliceblue;
+   height : 62px;
+   width : 100%;
+}
+
+#main-nav{
+   width : 100%;
+   max-width : 960px;
+
+   margin : auto;
+}
+
+#main-nav ul {
+   list-style-type : none;
+   line-height : 40px;
+   display: flex;
+   justify-content: space-around;
+}
+
+#main-nav ul li {
+   display : inline-block;
+}
+
+#main-nav ul li  a {
+    text-decoration: none;
+    color: #03051E;
+    font-size: 18px;
+}
+
+#main-nav ul li:hover{
+    background: #c3bef0;
+    transition: all 0.5s ease-in;
+    box-sizing: border-box;
+}
+
+.page {
+   width : 100%;
+   height : 100%;
+   color : white;
+   padding : 15px 10px;
+   box-sizing : border-box;
+}
+
+#presentation {
+   background : forestgreen;
+   height : 700px;
+}
+
+#experiences {
+   background : darkred;
+   height : 700px;
+}
+
+#expertises {
+   background : navy;
+   height : 700px;
+}
+
+#formation {
+   background : purple;
+   height : 700px;
+}
+
+#informatique{
+   background: yellow;
+   height : 700px;
+}
+
+#contacts{
+   background: red;
+   height : 700px;
+}
+
+                   /*** MISE EN PAGE GENERAL ONE PAGE ***/
+
+                        /*** MISE EN FORME GENERAL ***/
+h1
+{
+    text-align: center;
+    color: #90b2e4;
+    font-size: 2.4em;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Lobster', cursive;
+}
+
+h2
+{
+    font-size: 35px;
+    color: #2c3e50;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3
+{
+    font-size: 22px;
+    color: #2c3e50;
+    padding: 15px;
+    font-family: 'Anton', sans-serif;
+}
+
+h4
+{
+    text-align: center;
+    font-weight: bold;
+    color:#000;
+    background: rgba(229, 230, 246, 0.44)
+}
+
+blockquote
+{
+    font-style: italic;
+    font-size: 120%;
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+main
+{
+     /* pas de hauteur car il contient aside et section donc il se dimension selon eux*/
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+main p
+{
+    font-family: 'Proza Libre', sans-serif;
+    font-size:0.9em;
+}
+
+aside
+{
+    height:250px;
+    background: yellow;
+}
+
+section
+{
+    padding: 20px;
+}
+
+.separation
+{
+   width: 100%;
+   height: 20px;
+   background: #282A2B;
+}
+
+.clear
+{
+    clear: both;
+}
+
+
+
+                        /*** MISE EN FORME GENERAL ***/

@@ -2,7 +2,6 @@
 {
     box-sizing: border-box;
 }
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,14 +21,12 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-}
-                            /* Reset */
+} /* Reset */
 
 html, body
 {
     scroll-behavior: smooth;
     margin: 0;
-    background: url(../img/fond012.jpg) fixed;
     box-sizing: border-box;
     position: relative;
     width : 100%;
@@ -38,7 +35,64 @@ html, body
 
 @import url('https://fonts.googleapis.com/css?family=Anton|Lobster|Proza+Libre');
 
+ 							/***** RESET *****/
+					/*** MISE EN PAGE GENERAL ONE PAGE ***/
 
+#main-header {
+	background : aliceblue;
+	position : fixed;
+	height : 160px;
+	width : 100%;
+}
+
+#main-nav {
+	width : 100%;
+	max-width : 960px;
+	margin : auto;
+}
+
+#main-nav ul {
+	list-style-type : none;
+	line-height : 60px;
+}
+
+#main-nav ul li {
+	display : inline-block;
+}
+
+.page {
+	width : 100%;
+	height : 100%;
+	color : white;
+	padding : 60px 30px;
+	box-sizing : border-box;
+}
+
+#presentation {
+	background : forestgreen;
+}
+
+#experiences {
+	background : darkred;
+}
+
+#expertises {
+	background : navy;
+}
+
+#formation {
+	background : purple;
+}
+
+#informatique{
+	background: yellow;
+}
+
+#contacts{
+	background: red;
+}
+
+					/*** MISE EN PAGE GENERAL ONE PAGE ***/
 h1
 {
     text-align: center;
@@ -120,6 +174,7 @@ section
     display: flex;
     justify-content: space-between;
     align-items: center;
+	height: 40px;
 }
 
 #contact
@@ -169,7 +224,7 @@ section
 {
    background: #333637;
    width: 100%;
-   height: 15vh;
+   height: 10vh;
    display: flex;
    justify-content: space-around;
    align-items: center;
@@ -191,22 +246,19 @@ nav
 nav a
 {
     display: inline-block;
-    padding: 4px 12px 8px 10px;
+    padding-left: 20px;
     margin: 9px 11px;
-    background: #254b62;
-    border-radius: 20px;
-    box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
     color: #90b2e4;
     text-decoration: none;
-    overflow-y: hidden;
+
 }
 
 nav a:hover
 {
-    border-bottom: 2px inset #a1a5ac;
     color: white;
-    background: #90b2e4;
+    background: #cbd3de;
     box-shadow: none;
+
 }
 
 nav ul li
@@ -306,8 +358,9 @@ button:hover
 .description
 {
     width: 60%;
-    float: right;
-    padding: 0 150px;
+    position: relative;
+	bottom: -10px;
+	left: 400px;
 }
 
 .description p
@@ -317,7 +370,7 @@ button:hover
     float: left;
     padding: 10px;
     border-radius: 2px 20px;
-    background: rgba(0,0,0,0.7)
+    background: rgba(0,0,0,.9)
 }
 
 span.blink_me {
@@ -390,7 +443,7 @@ main i
     margin: 0;
 
 }
-   /************************* DEBUT FOOTER *****************************/
+   /********************** DEBUT FOOTER ************************/
 footer
 {
    background: #333637;
@@ -445,10 +498,10 @@ text-decoration: underline;
 
 
 
-        /************************* FIN FOOTER *****************************/
+        /**************** FIN FOOTER *******************/
 
 
-    /************************* DEBUT HAMBURGER RS *****************************/
+    /****************** DEBUT HAMBURGER RS *********************/
 
     .content
     {
@@ -857,10 +910,10 @@ text-decoration: underline;
      width: 100%;
  };
 }
-         /*********************FIN INFO ANIMATIONS **************************/
+         /*****************FIN INFO ANIMATIONS **********************/
 
 
-         /****************** DEBUT FORMULAIRE DE CONTACT ********************/
+         /************* DEBUT FORMULAIRE DE CONTACT ***************/
 .formu
 {
     padding: 0 0;
@@ -946,7 +999,6 @@ form
 }
 
 
-
 label.menuTitle
 {
     text-align: left;
@@ -993,33 +1045,4 @@ transition: 2s;
  }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /************************ PARTIE RESERVE RESPONSIVE********************/
+ 			/********* PARTIE RESERVE RESPONSIVE ********/
