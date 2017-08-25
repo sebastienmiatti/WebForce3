@@ -37,33 +37,34 @@ html, body
                    /*** MISE EN PAGE GENERAL ONE PAGE ***/
 
 #main-header{
-   background : aliceblue;
-   height : 62px;
-   width : 100%;
+    text-align: center;
+    width : 100%;
 }
 
 #main-nav{
-   width : 100%;
-   max-width : 960px;
-
-   margin : auto;
+    background : aliceblue;
+    width : 100%;
+    max-width : 900px;
+    min-width : 200px;
+    position: fixed;
+    top: 0;
 }
 
 #main-nav ul {
    list-style-type : none;
-   line-height : 40px;
-   display: flex;
-   justify-content: space-around;
+   line-height : 58px;
+   float: left;
 }
 
 #main-nav ul li {
    display : inline-block;
+
 }
 
 #main-nav ul li  a {
     text-decoration: none;
     color: #03051E;
-    font-size: 18px;
+    font-size: 1.1rem;
 }
 
 #main-nav ul li:hover{
@@ -77,7 +78,6 @@ html, body
    height : 100%;
    color : white;
    padding : 15px 10px;
-   box-sizing : border-box;
 }
 
 #presentation {

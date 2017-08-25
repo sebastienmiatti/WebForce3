@@ -807,18 +807,18 @@ button:hover
 
 #zoning7 aside
 {
-background: blue;
-width: 20%;
-height: 650px;
-float: left;
+    background: blue;
+    width: 20%;
+    height: 650px;
+    float: left;
 }
 
 #zoning7 section
 {
-width: 80%;
-float: left;
-margin: 0;
-padding: 0;
+    width: 80%;
+    float: left;
+    margin: 0;
+    padding: 0;
 }
 
 section.slideshow
