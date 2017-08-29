@@ -7,23 +7,10 @@
 	outline : 0 none;
 }
 
-html, body {
-	width : 100%;
-	height : 100%;
-	position : relative;
-}
-
-#main-header {
-	background : aliceblue;
-	position : fixed;
-	height : 60px;
-	width : 100%;
-}
-
-#main-nav {
-	width : 100%;
-	max-width : 960px;
-	margin : auto;
+html, body{
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 #main-nav ul {
@@ -51,10 +38,17 @@ html, body {
 	background : darkred;
 }
 
-#experiences {
-	background : navy;
+
+.page{
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 60px 30px;
+    font-weight: bold;
+    box-sizing : border-box;
 }
 
-#formation {
-	background : purple;
+
+#presentation{
+    background: #324e7b;
 }
