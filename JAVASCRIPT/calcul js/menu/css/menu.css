@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+*
+{
+    margin: 0;
+    padding: 0;
+    outline: 0 none;
+    border: 0 none;
+}
+
+#main-nav
+{
+    height: 2rem;
+    background: #2c8ef0;
+}
+
+#main-nav ul li {
+    display: inline-block;
+
+}
+
+#main-nav ul li a,
+#main-nav ul li a:link,
+#main-nav ul li a:active{
+    color: white;
+    text-decoration: none;
+    line-height: 2rem;
+    font-weight: bold;
+
+}
