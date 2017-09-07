@@ -1,0 +1,22 @@
+body{
+    padding-top: 70px;
+}
+.rouge{
+    min-height: 70px;
+    background-color: #CF4647;
+    color: #fff;
+}
+.bleu{
+    min-height: 70px;
+    background-color: #2BB3C0;
+    color: #fff;
+}
+.vert{
+    min-height: 30px;
+    background-color: #588C73;
+}
+.jaune{
+    min-height: 30px;
+    background-color: #FFED78;
+
+}

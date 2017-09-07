@@ -1,0 +1,191 @@
+/*----- RESET------ */
+@charset "UTF-8";
+
+*{
+box-sizing:border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0 none;
+outline: 0 none;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+
+body{
+scroll-behavior: smooth;
+}
+
+
+/*----- RESET------ */
+
+
+/****** DEBUT  Style de la page principal******/
+
+h1, h2{
+font-family: 'Merienda', cursive;
+}
+
+
+
+/****** FIN Style de la page principal******/
+
+
+
+
+/****** DEBUT HEADER ******/
+/*******  DEBUT NAVBAR  *******/
+
+nav{     /* navbar  */
+background: #061339;
+height: 50px;
+}
+
+nav p{  /*style du premier paragraphe dans la navbar*/
+text-align: left;
+margin-left: 365px;
+font-size: 1.4rem;
+color: white;
+}
+
+a, a:hover, a:visited, a:active{  /*style du lien concernant le premier paragraphe de navbar*/
+text-decoration: none;
+color: inherit;
+}
+
+/***** FIN NAVBAR ******/
+
+/**** DéBUT PREMIER BLOC *****/
+
+Header{  /* style du premier blocs */
+background: #B9CDFF;
+background: url("../img/background.jpg") repeat-x;
+height: 180px;
+
+}
+
+Header h1{  /* style du paragraphe dans le premier blocs */
+text-align: center;
+color: #FFF;
+padding: 70px 0;
+font-size: 2rem;
+
+}
+/**** FIN PREMIER BLOC *****/
+/***** FIN HEADEUR *****/
+
+/************* DEBUT MAIN *********************/
+Main{  /*conteneur du bloc principal */
+display: inline-block;
+color: black;
+padding: 50px;
+margin-left: 345px;
+
+}
+
+Main h2{  /*conteneur du bloc principal */
+color: #2F4073;
+text-align: center;
+margin: 18px;
+}
+
+/****** DEBUT  Formulaire ******/
+form{
+padding: 5px;
+border: 1px input;
+box-shadow: 2px 2px 10px rgb(1,1,1,.2);
+height: 350px;
+line-height: 50px;
+border-radius: 2px;
+}
+
+
+.clear{clear:both;}
+/****** FIN  Formulaire ******/
+
+/********** DEBUT CAROUSEL *******/
+
+
+
+
+/********** FIN CAROUSEL *******/
+
+
+
+
+
+
+/**** DEBUT FOOTER ****/
+Footer{     /*** conteneur du footer ****/
+background: #dadada;
+height: 303px;
+color: #061339;
+}
+
+Footer p{ /****   paragraphe dans le footer****/
+
+}
+
+Footer h2{  /**** titre dans le footer ****/
+font-size: 1.6rem;
+
+}
+
+.logo{
+height: 255px;
+width: 270px;
+background: #7885A5;
+box-sizing: border-box;
+}
+
+
+
+/**** FIN  FOOTER ****/
+
+
+
+
+
+
+
+/******************** DEBUT COLOR ************************/
+.red{
+min-height: 35px;
+background-color: darkred;
+border: 1px solid;
+}
+
+.green{
+min-height: 35px;
+background-color: lightgreen;
+border: 1px solid;
+}
+
+.yellow{
+min-height: 35px;
+background-color: yellow;
+border: 1px solid;
+}
+
+.blue{
+min-height: 35px;
+background-color: blue;
+border: 1px solid;
+}
+
+/********************* FIN COLOR **************************/

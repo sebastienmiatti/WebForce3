@@ -1,0 +1,11 @@
+body
+{
+    background: linear-gradient(#1df4ff, #ff6c91,rgb(240, 196, 90)) no-repeat fixed;
+    text-align: center;
+    color: #fff;
+}
+
+h2
+{
+    background: linear-gradient(#68f1da,#ff3333);
+}
