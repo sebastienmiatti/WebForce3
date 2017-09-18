@@ -419,17 +419,32 @@ echo '</table>';
 
 echo '<hr>';
 // Exercice 3 : Afficher un tableau avec 10 lignes allant de 0 à 99 chaques ligne ( chaques ligne 0-9 // 10-19 ... 90 à 99).
-
-for($m = 0; $m < 10; $m++){
+//$z = 0 ;
 echo '<table border="1">';
+for($m = 0; $m <= 9; $m++){
 echo '<tr>';
-for($n = 0; $n < 100; $n++){
-	echo '<td>' . $n . '</td>';
+for($n = 0; $n <= 9; $n++){
+	echo '<td>' . ($m * 10 + $n) /*$z*/. '</td>';
+	//$z++;
 }
 echo '</tr>';
-echo '</table>';
 }
- echo '<hr>';
+echo '</table>';
+echo '<hr>';
+
+	// de 0 à 99
+//modulo
+echo '<br>';
+echo '<table border="1">';
+echo '<tr>';
+for ($i = 0; $i <= 99; $i++){
+	if($i%10 == 0){
+		echo '</tr><tr>';
+	}
+	echo '<td>' . $i . '</td>';
+}
+echo'</tr>';
+echo '</table>';
 
 titre('Tableaux de données ARRAY');
 // un tableau de données array , est déclaré un peu comme une variable améliorée, car on ne conserve pas qu'une seul valeur mais plusieurs. Les valeurs seront classées...
