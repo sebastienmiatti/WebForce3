@@ -10,7 +10,7 @@ if(!empty($_POST)){
 //$email = $_POST['email'];
 //$sujet = $_POST['sujet'];
 //$message = $_POST['message'];
-}
+
 
 $header = "From: $email \r\n";
 $header .= "Reply-To : $email \r\n";
@@ -37,14 +37,7 @@ mail($destinataire, $sujet, $contenu, $header); // mail() nous permet d'envoyer 
   4 : l'en-tête (optionnelle)
 */
 
-
-
-
-
-
-
-
-
+}
 
 ?>
 

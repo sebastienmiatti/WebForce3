@@ -5,7 +5,7 @@ $fichier = file('liste.txt'); // la fonction file() fait tout le travail, elle n
 
 echo '<pre>';
 print_r($fichier);
-echo '<pre>';
+echo '</pre>';
 
 // Afficher :
 
