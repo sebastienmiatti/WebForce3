@@ -33,9 +33,9 @@ Méthode (fonction) Query() : La méthode query() de l'objet $mysqli permet d'ef
 // Les erreurs SQL ne sont pas affichées par défault. 
 //echo $mysqli -> error; // permet d'afficher les erreurs SQL. 
 
-
 // 1 : Requete INSERT (UPDATE, DELETE, REPLACE)
-$mysqli -> query("INSERT INTO employes (prenom, nom, sexe, salaire, service, date_embauche) VALUES ('toto', 'tata', 'm', 1200, 'informatique', CURDATE())");
+$mysqli -> query("INSERT INTO emples (prenom, nom, sexe, salaire, service, date_embauche) VALUES ('toto', 'tata', 'm', 1200, 'informatique', CURDATE())");
+
 
 // 2 : Requete SELECT (un seul résultat)
 

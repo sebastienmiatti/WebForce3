@@ -1,20 +1,16 @@
 <?php
-$bdd = new Mysqli('localhost', 'root', '', 'entreprise');
+$bdd = new PDO('mysql:host=localhost;dbname=entreprise', 'root', '');
 
 
 
 $resultat = $bdd -> query("SELECT * FROM employes");
-//$resultat =  (OBJ Mysqli_result) INEXPLOITABLE ! 
+//$resultat =  (OBJ PDOStatement) INEXPLOITABLE ! 
 
-// while($employes = $resultat -> fetch_assoc()){
-	// echo '<pre>';
-	// print_r($employes);
-	// echo '</pre>';
-// }
+$employes = $resultat -> fetchAll(PDO::FETCH_ASSOC);
 
 
-
-
+//-----------------
+//-----------------
 
 ?>
 
@@ -30,7 +26,7 @@ $resultat = $bdd -> query("SELECT * FROM employes");
 
 				
 					<!-- Forme contractée : -->
-					<?php while($employes = $resultat -> fetch_assoc()) : extract($employes) ?>
+					<?php foreach($employes as $valeur) : extract($valeur) ?>
 					<!-- Début vignette produit  -->
 					<div class="col-sm-6 col-lg-3 col-md-4">
 						<div class="thumbnail">
@@ -38,7 +34,7 @@ $resultat = $bdd -> query("SELECT * FROM employes");
 							<div class="caption">
 								<h4 class="pull-right"><?= $id_employes ?></h4>
 							<h4>
-		<a href="fiche_employe.php?id=<?= $id_employes ?>">
+								<a href="fiche_employe.php?id=<?= $id_employes ?>">
 								<?= $prenom ?> <?= $nom ?>
 								</a>
 							</h4>
@@ -61,14 +57,7 @@ $resultat = $bdd -> query("SELECT * FROM employes");
 						</div>
 					</div>
 					<!-- Fin vignette Produit  -->
-					<?php endwhile; ?>
-		
-
-
-					
-
-
-
+					<?php endforeach; ?>
 			</div>
 		</div>
 	</body>

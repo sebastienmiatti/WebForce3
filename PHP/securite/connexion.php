@@ -6,7 +6,7 @@ Exemple 1 :
 pseudo : juju'#
 mdp :
 
-requete : SELECT * FROM mebre WHERE pseudo = 'juju'#' && mdp=''
+requete : SELECT * FROM membre WHERE pseudo = 'juju'#' && mdp=''
 Explication : Le dièse permet de mettre la suite de la requête en commentaire; Donc demande, le user donc le pseudo est JUJU. le MDP n'a plus aucune importance.
 
 -------------
@@ -26,7 +26,7 @@ Requete : SELECT * FROM membre WHERE pseudo = '' && mdp = '' OR 1='1'
 Explications :  on demande le membre eyant le pseudo et le mot de passe vide (n'existe pas).  ou alors 1=1 o_0
 
 -----------
-Autre ewemple faille xss :
+Autre exemple faille xss :
 pseudo : <p style="color:red">test</p>
 mdp :
 
