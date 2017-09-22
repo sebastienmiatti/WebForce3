@@ -1,13 +1,15 @@
 <?php
 
 session_start(); // Création du fichier de session
-$pdo = new PDO('mysql:host=localhost;dbname=repertoire', 'root','');
+$resultat = $pdo = new PDO('mysql:host=localhost;dbname=repertoire', 'root','');
 
+echo 'Nombre de ligne affectée : ' .$resultat . '<br>';
+echo 'Dernier enregistrement : ' . $pdo -> lastInsertId();
 
 
 
 //
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +20,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=repertoire', 'root','');
     </head>
     <body>
         <h1>Information :</h1>
-        <form action="" method="POST">
+        <form action="formulaire.php" method="POST">
             <label>Nom : *</label><br>
             <input type="text" name="nom"><br><br>
 
