@@ -34,6 +34,8 @@ if(!empty($_POST)){
 	
 	$destinataire  = 'yakine.hamida@evogue.fr';
 	
+		
+	
 	mail($destinataire, $sujet, $contenu, $header ); // mail() nous permet d'envoyer un email, cette fonction attend 4 arguments : 
 	
 	/*
