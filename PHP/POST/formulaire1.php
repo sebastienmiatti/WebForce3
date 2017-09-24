@@ -1,7 +1,7 @@
 <?php
 
 //$_POST représente les informations posté via un formulaire (method='post'). C'est une superglobale, et comme toutes les superglobale, c'est un tableau de données ARRAY.
-// Attention chaque vhamps doit avoir un attribut name qui permet de créer l'indice dans notre ARRAY $_POST
+// Attention chaque champs doit avoir un attribut name qui permet de créer l'indice dans notre ARRAY $_POST
 echo'<pre>';
 print_r($_POST);
 echo'</pre>';

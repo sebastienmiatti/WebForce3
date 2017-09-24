@@ -11,7 +11,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=entreprise','root','', array(
     PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING
 ));
 /*
-$pdo représente unn objet de la classe PDO. il 'contient' notre connexion à la base de données !
+$pdo représente un objet de la classe PDO. il 'contient' notre connexion à la base de données !
 
 La classe PDO contient plusieurs méthodes (fonctions) pour effectuer des requetes aupres de notre BDD. Dans ce fichier nous allons voir la methode -> query() et exec(), prepare() et execute() seront vues dans le fichier pdo_avance.php
 

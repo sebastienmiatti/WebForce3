@@ -18,7 +18,7 @@ echo 'Parametre 3 : '. $_GET['prix'] . '€<br>';
 ? article=jean  &  couleur=bleu  &  prix=10
   clé=valeur    &  clé=valeur    &  clé=valeur
 
-
+*/
 ?>
 
 <h1>page 2</h1>
