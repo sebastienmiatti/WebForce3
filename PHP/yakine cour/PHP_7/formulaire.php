@@ -1,12 +1,29 @@
 <?php
+$msg = '';
+if(!empty($_POST)){
+    echo '<pre>';
+    print_r($_POST);
+    echo '</pre>';
 
-session_start(); // Création du fichier de session
-$resultat = $pdo = new PDO('mysql:host=localhost;dbname=repertoire', 'root','');
+    if(empty($_POST['nom'])){
+        $msg .= '<p> veuillez renseigner un nom </p>';
+    }else{
+        if(strlen($_POST['nom']) < 3 || strlen($_POST['nom']) > 30 ){
+        $msg .= '<p> Vottre nom doit comporter entre 3 et 30 caractères! </p>'
+        }
+    }
+    if(empty($_POST['prenom'])){
+        $msg .= '<p> veuillez renseigner un nom </p>';
+    }else{
+        if(strlen($_POST['prenom']) < 3 || strlen($_POST['prenom']) > 30 ){
+        $msg .= '<p> Vottre nom doit comporter entre 3 et 30 caractères! </p>'
+        }
+        if(empty($_POST['telephone'])){
+            $msg .= '<p> veuillez renseigner votre numero de téléphone</p>';
+        }
+}
 
-echo 'Nombre de ligne affectée : ' .$resultat . '<br>';
-echo 'Dernier enregistrement : ' . $pdo -> lastInsertId();
-
-
+}
 
 //
 
