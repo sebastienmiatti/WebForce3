@@ -12,8 +12,9 @@ $pdo = new PDO('mysql:host=localhost;dbname=site','root','', array(
 
 
     // VARIABLES
-$msg = '';
-
+$msg = ''; // $msg permet de communiquer avec l'utilisateur
+$page = ''; // contiendra le nom de la page en cours de visite ( menu surbrillance + titre de la page).
+$contenu= ''; // nous permettra ponctuellement de stocker du contenu a afficher. 
 
     //CHEMINS
 define('RACINE_SITE', '/github/WebForce3/PHP/site/');

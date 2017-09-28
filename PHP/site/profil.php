@@ -3,7 +3,7 @@ require_once('inc/init.inc.php');
 
     debug($_SESSION);
     debug($_SESSION['membre']);
-    
+
 // Traitement pour rediriger l'utilisateur s'il est deja connecté
 if(!userConnecte()){
 header('location:connexion.php');
@@ -13,6 +13,7 @@ header('location:connexion.php');
 
     extract($_SESSION['membre']);
 
+$page = 'Profil';
     require('inc/header.inc.php');
 ?>
 

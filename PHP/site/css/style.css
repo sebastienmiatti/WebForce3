@@ -32,11 +32,27 @@ footer{ background: #000; color: white; text-align: center; padding: 7px 0;}
 }
 .boutique-produit:hover{ background: #c0c0c0; }
 /**************************************************** BOUTIQUE ************************************************/
+.btn-add{
+	display: block;
+	padding: 3px 10px;
+	border: 3px solid #04baf6;
+	width: auto;
+	clear: left;
+	width: 200px;
+	text-align: center;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	position: absolute;
+	right: 100px;
+	font-weight: bold;
 
-
-
-
-
+}
+.btn-add:hover{
+	background-color: #04baf6;
+	color: white;
+	font-weight: bold;
+	transition: 1s;
+}
 
 
 /**************************************************** Formulaire ************************************************/
@@ -69,7 +85,9 @@ form input, form select, form textarea{
 	margin-top: 10px;
 	text-indent: 20px;
 	border: none;
-	border: 1px solid white;
+	border: 1px solid black;
+	border-radius: 5px;
+
 }
 
 form input{
@@ -89,7 +107,7 @@ form input[type='file']{
 form textarea{
 	height: 120px;
 	resize: none;
-	border: none;
+	border: 1px solid black;
 }
 
 form input:focus{

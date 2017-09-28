@@ -65,6 +65,8 @@ if(userConnecte()){
     //    -> Enregistrement en session
     //    -> Redirection vers profil
 
+    $page = 'Connexion';
+
 require('inc/header.inc.php');
 
 ?>
