@@ -40,7 +40,7 @@ if(!empty($_POST)){  // verif si les champs ne sont pas vide
 
             if(empty($msg)){
 
-                $resultat = $pdo -> prepare("INSERT INTO membre (pseudo, mdp, email, photo,statut) VALUES (:pseudo, :mdp, :email, photo, '1') ");
+                $resultat = $pdo -> prepare("INSERT INTO membre (pseudo, mdp, email, photo,statut) VALUES (:pseudo, :mdp, :email, :photo, '1') ");
 
                 $resultat -> bindParam(':pseudo', $_POST['pseudo'], PDO::PARAM_STR);
                 $resultat -> bindParam(':mdp', $_POST['mdp'], PDO::PARAM_STR);
@@ -62,7 +62,7 @@ if(!empty($_POST)){  // verif si les champs ne sont pas vide
     <body>
         <h1>Authentification :</h1>
         <form action="" method="POST" enctype="multipart/form-data">
-
+            <?= $msg ?>
             <input type="text" name="pseudo" placeholder="pseudo"><br><br>
 
             <input type="text" name="mdp" placeholder="Mot de passe"><br><br>
