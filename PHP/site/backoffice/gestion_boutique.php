@@ -2,12 +2,22 @@
 require_once('../inc/init.inc.php');
 
 
+if(isset($_GET['msg']) && $_GET['msg'] == 'validation' && isset($_GET['id'])){
+    $msg .= '<div class="validation">Le produit N°' . $_GET['id'] . ' a été correctement enregistré! </div>';
+}
+
+
+
+if (isset($_GET['msg']) && $_GET['msg'] == 'suppr' && isset($_GET['id'])) {
+$msg .= '<div class="validation">Le produit N°' . $_GET['id'] . ' a été correctement supprimé !</div>';
+}
 
 
 $resultat = $pdo -> query('SELECT * FROM produit');
     $produits =  $resultat -> fetchAll(PDO::FETCH_ASSOC);
     $contenu .= 'Nombre de resultats : ' . $resultat -> rowCount() . '<br><hr>';
 
+    $contenu .= $msg;
     $contenu .= '<table border="1">';
     $contenu .= '<tr>'; // lignes des titres
 
@@ -29,7 +39,7 @@ $resultat = $pdo -> query('SELECT * FROM produit');
                 }
             }
             $contenu .= '<td><a href=""><img src="../img/edit.png"></a></td>';
-            $contenu .= '<td><a href=""><img src="../img/delete.png"></a></td>';
+            $contenu .= '<td><a on click="confirm(\'Etes certain de vouloir supprimer ce produit numéro' . $valeur['id_produit'] . '\');" href="supprimer_produit.php?id=' . $valeur['id_produit'] . '"><img src="../img/delete.png"></a></td>';
                 $contenu .= '</tr>';
         }
     $contenu .= '</table>';
