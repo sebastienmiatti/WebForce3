@@ -39,10 +39,6 @@ debug($_SESSION);
 
 
 
-
-
-
-
 $page = 'Boutique';
 
 require_once('inc/header.inc.php');

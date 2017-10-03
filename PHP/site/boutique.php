@@ -5,7 +5,7 @@ require('inc/init.inc.php');
         // 1/ On recupère toutes les catégories existantes dans la Boutique
         // 2/ On les Affiche dans le "mini-menu latéral"
         // 3/ On créer un lien pour chacune des catégories
-        // 4/On récupère les produits, soit en fonction de la catégorie dans l'URL soit tous les produits
+        // 4/ On récupère les produits, soit en fonction de la catégorie dans l'URL soit tous les produits
         // 5/ On affiche les produits dynamiquement
         // 6/ On créer le lien pour chaque produit
 
