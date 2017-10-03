@@ -38,7 +38,7 @@ $resultat = $pdo -> query('SELECT * FROM produit');
                     $contenu .= '<td>' . $valeur2 . '</td>';
                 }
             }
-            $contenu .= '<td><a href=""><img src="../img/edit.png"></a></td>';
+            $contenu .= '<td><a href="formulaire_produit.php?id=' . $valeur['id_produit'] . '"><img src="../img/edit.png"></a></td>';
             $contenu .= '<td><a on click="confirm(\'Etes certain de vouloir supprimer ce produit numéro' . $valeur['id_produit'] . '\');" href="supprimer_produit.php?id=' . $valeur['id_produit'] . '"><img src="../img/delete.png"></a></td>';
                 $contenu .= '</tr>';
         }
