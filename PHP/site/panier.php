@@ -153,10 +153,14 @@ require_once('inc/header.inc.php');
 
 		<tr>
 			<td colspan="6">
+				<?php if (userConnecte()) : ?>
 				<form method="post" action="">
-					<input type="hidden" name="amount" value="" />
+					<input type="hidden" name="amount" value="<?= montantTotal() ?>" />
 					<input type="submit" value="Payer" name="paiement" />
 				</form>
+			<?php else : ?>
+				Veuillez nous connecter pour finaliser votre commande. <a href="connexion.php"><b>Connection</b></a>
+			<?php endif; ?>
 			</td>
 		</tr>
 
