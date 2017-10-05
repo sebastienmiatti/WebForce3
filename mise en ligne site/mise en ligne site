@@ -1,0 +1,18 @@
+                    Mise en ligne d'un site
+
+
+        1/ Inscription sur un hébergeur-> email de confirmation
+
+        2/ Création d'une base de donnée
+
+        3/ On importe notre Bdd local dans la Bdd de l'hebergeur
+
+        4/ On upload les pages, les sources, les vidéos etc... qui sont liées au site
+
+        5/ Modifier les paramètre de connexion a la Bdd :
+           -Hôte
+           -Nom de la Bdd
+           -Login
+           -MDP
+
+        6/ Tester la mise en ligne

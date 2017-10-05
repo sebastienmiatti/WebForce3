@@ -4,30 +4,30 @@ $nationalite = '';
 
 if(isset($_GET['pays']) && !empty($_GET['pays'])){
 	echo $_GET['pays'];
-	
-	
+
+
 	switch($_GET['pays']){
-		
-		case 'fr' : 
+
+		case 'fr' :
 			$nationalite = 'française';
 		break;
-		
-		case 'es' : 
+
+		case 'es' :
 			$nationalite = 'espagnole';
 		break;
-		
-		case 'it' : 
+
+		case 'it' :
 			$nationalite = 'italienne';
 		break;
-		
-		case 'en' : 
+
+		case 'en' :
 			$nationalite = 'anglais';
 		break;
-		
-		default : 
+
+		default :
 			$nationalite = 'Bien joué !! mais pas bien joué !!';
 		break;
-		
+
 	}
 }
 ?>
@@ -38,8 +38,8 @@ if(isset($_GET['pays']) && !empty($_GET['pays'])){
 		<li><a href="?pays=es">Espagne</a></li>
 		<li><a href="?pays=en">Angleterre</a></li>
 	</ul><hr/>
-	<?php  echo 'Vous êtes de nationalité ' . $nationalite; ?>
-	
+	<?php  echo 'Vous êtes de nationalité ' . $nationalite ; ?>
+
 	<?php echo 'Vous etes ' . $_GET['pays'] . '<br/>'; ?>
-	
+
 </html>

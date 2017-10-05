@@ -1,41 +1,41 @@
 ﻿<?php
 
 if(!empty($_POST)){
-	
+
 	echo '<pre>';
 	print_r($_POST);
 	echo '</pre>';
-	
+
 	extract($_POST);
 	// $operateur = $_POST['operateur'];
 	// $n1 = $_POST['n1'];
 	// $n2 = $_POST['n2'];
-	
+
 	if(is_numeric($n1) && is_numeric($n2)){
 		if($operateur == 'addition' || $operateur == 'multiplication' || $operateur == 'soustraction' || $operateur == 'division' ){
 			switch($operateur){
-				
-				case 'addition' : 
+
+				case 'addition' :
 					$resultat = $n1 + $n2;
-				break; 
-				
-				case 'soustraction' : 
+				break;
+
+				case 'soustraction' :
 					$resultat = $n1 - $n2;
 				break;
-			
-				case 'multiplication' : 
+
+				case 'multiplication' :
 					$resultat = $n1 * $n2;
 				break;
-				
-				case 'division' : 
+
+				case 'division' :
 					$resultat = $n1 / $n2;
 				break;
-				
+
 				default :
 					header('location:calculatrice.php');
 				break;
 			}
-		
+
 		$msg = 'Le résultat est : ' . $resultat . '<br/>';
 		}
 		else{
@@ -49,4 +49,3 @@ if(!empty($_POST)){
 echo $msg;
 ?>
 <a href="calculatrice.php">Effectuer un autre calcul</a>
-
