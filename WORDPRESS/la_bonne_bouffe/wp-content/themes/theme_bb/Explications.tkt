@@ -61,4 +61,20 @@ Explications du code de ces pages.
    get_header() : fait un require/include de header.php
    get_footer() : fait un require/include du footer.php
 
-   /!\Ce code constitue la base de chaque template WP. Onpeut modifier les templates, ajouter des choses, etc... mais la base est la !!! /!\ 
+   /!\Ce code constitue la base de chaque template WP. Onpeut modifier les templates, ajouter des choses, etc... mais la base est la !!! /!\
+
+ULTIMATE AJAX LOGIN
+
+WIDGET CONTENT BLOCK
+
+WIDGET CSS CLASSES
+
+WIDGET OPTION
+
+DISPLAY WIDGET
+
+IMAGES WIDGET
+
+Créer différentes catégories pour les restaurants : PAris, Lyon, Marseille, Strasbourg
+
+Créer des articles de restaurant qui seront classé dans ces catégories
