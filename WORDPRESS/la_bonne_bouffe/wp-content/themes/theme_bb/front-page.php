@@ -2,7 +2,9 @@
 get_header();
 ?>
 
-     <h1>accueil</h1>    
+    <?php echo showCategory(); ?>
+
+     <h1>accueil</h1>
 
  <?php if(have_posts()) : ?>
      <?php while(have_posts()) : the_post() ?>
