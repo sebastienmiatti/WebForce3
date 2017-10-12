@@ -1,0 +1,92 @@
+WORDPRESS DEV
+--------------
+
+Objectif : Etre capable de créer un thème Wordpress pour répondre à la demande d'un client qui souhaite un design particulier. Cette démarche permet de comprendre le fonctionnement de Wordpress et ainsi de modifier des thèmes en profondeur. 
+
+
+---------------------------------------
+1/ CREATION DU THEME ET DES TEMPLATES :
+---------------------------------------
+
+- Dans wp-content/themes/theme_bb : Création du theme
+- theme_bb/style.css
+- theme_bb/assets : toutes les images, les JS, et CSS additionnel du theme. 
+- theme_bb/screenshot.png : Image représentative du theme (dans l'admin)
+
+- style.css : Déclaration de notre theme.
+- index.php : creation du template de base (vide pour le moment)
+
+A ce stade notre theme est reconnu dans l'admin de WP ! 
+
+- header.php : Partie haute de nos pages (templates)
+- footer.php : partie basse de nos pages (templates)
+
+
+HEADER.php :
+- bloginfo('name') : bloginfo() nous affiche les informations générales de notre site. On précise en argument l'info à afficher. ici name signifie le titre (nom) du site. 
+- bloginfo('description') : La description / Le slogan du site
+- bloginfo('charset') : le charset du site
+- bloginfo('template_directory') : chemin absolue du site (depuis le repertoire web) 
+- wp_title() : Affiche le titre de la page. 3 arguments : 1/ separateur 2/True ou false (optionnal) 3/ Position du titre par rapport au nom du site (optionnel)
+- wp_head() : Permet d'inclure les éléments important à WP (barre admin...). Emplacement essentiel, juste avant le </head>
+- body_class() : Emplacement : <body>. Permet à WP de prendre la main sur la création des class à l'intérieur de la balise <body>. L'idée étant de rendre customisable une page par rapport à une autre. 
+- get_site_url() : RETOURNE l'url de l'accueil du site
+
+=====> CODEX : https://codex.wordpress.org/WPMU_Functions/get_bloginfo
+
+- Contenu : 
+	- index.php : home par défaut, liste tous les articles
+	- page.php : La structure de base qui affiche le contenu d'une page
+	- single.php : La structure de base qui affiche le contenu d'un article
+	- front-page.php : La structure de la page d'accueil
+	- category.php : La structure de la page qui affiche une catégorie
+
+WP fait la distinction en fonction des nom de fichier, et distribue le contenu. 
+
+Explications du code dans ces pages : 
+
+	La boucle if(have_posts()) / While (have_posts()) : 
+	Permet d'afficher le contenu d'une page PEU IMPORTE de quel contenu il s'agit, et PEU IMPORTE s'il y un ou plusieurs contenu(s). WP détermine le contenu à afficher grâce au nom du fichier. 
+	
+	have_posts() : Retourne un boolean qui indique à la boucle s'il y a encore du contenu à afficher. 
+	
+	the_post() : A l'interieu de la boucle while, la fonction permet de récupérer chaque contenu. 
+	
+	the_permalink() : affiche le lien d'un article
+	the_title() : affiche le titre d'un article
+	the_content() : affiche le contenu d'un article
+	
+	get_header() : fait un require/include de header.php
+	get_footer() : fait un require/include de footer.php
+	
+	/!\ Ce code constitue la base de chaque template WP. On peut modifier les templates, ajouter des choses etc... mais la base est là !!!   /!\
+	
+ULTIMATE AJAX LOGIN
+
+DISPLAY WIDGET
+
+Créer des catégories pour les restaurants : Paris, Lyon, Marseille, Strasbourg
+
+Créer des articles de restaurants qui seront classé dans ces catégories
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+

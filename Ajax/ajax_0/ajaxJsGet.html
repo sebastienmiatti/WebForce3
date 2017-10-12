@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax</title>
+</head>
+<body>
+
+    <h2>AJAX GET</h2>
+
+    <div id="demo"></div>
+
+    <button type="button" id="action">Change Content</button>
+
+<script>
+    document.getElementById('action').addEventListener("click", loadDoc);
+    // on cible l'élement bouton du document et a chaques fois que l'on clic sur le bouton , la fonction loadDoc s'exécutera
+        function loadDoc(){
+            var xhttp = new XMLHttpRequest();
+            // XMLHttpRequest permet de récupérer facilement des données via hide.bs.tooltip
+
+            xhttp.open("GET", "ajax_info.txt", true);
+            // on souhaite récuperer les données du fichier ajax_info.txt on prépare le fichier texte.
+            // open est une méthode de l'objet xhttp, les arguments sont : GET(mode d'ouverture), fichier de données, true(mode asynchrone)
+
+
+            xhttp.send();
+            //on donne l'ordre d'envoyer les données du fichier ajax_info a notre fichier ajaxJsGet.html
+
+            xhttp.onreadystatechange = function(){
+                if(xhttp.readyState == 4 && xhttp.status == 200){
+                    document.getElementById("demo").innerHTML = xhttp.responseText;
+                }
+            }
+            // la condition if permet de controlez que la requete est terminée et que les données sont completement accesible
+
+            /*
+            0 (unintialized) non initialisé
+            1 (loading) début du transfert des données
+            2 (loaded) données transférées
+            3 (interactive) les données recues accesibles en partie
+            4 (complete) les données sont complètement accesibles
+            */
+    }
+
+</script>
+
+
+
+
+</body>
+</html>
