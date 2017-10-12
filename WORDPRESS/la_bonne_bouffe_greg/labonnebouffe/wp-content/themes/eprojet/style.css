@@ -1,0 +1,98 @@
+/*
+Theme Name: eprojet
+Theme URI: ...
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: eprojet
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, red, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: eprojet
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{ font-family: 'Roboto'; font-size: 14px; margin: 0; background: #f2f2f2; }
+
+.clear{ clear: both; }
+
+
+/***************** HEADER+MENU *****************/
+header{ margin: 0; text-align: center; background: #4a515b; height: 50px; text-transform: UPPERCASE; position:relative; }
+nav  {  position:relative; }
+header li {  display: inline;  list-style: none; }  
+header ul {  margin: 0; }  
+header   a{ display:inline-block; color: #fff; padding: 0 15px; text-decoration: none; }
+header   a:hover{ background: #3e88be; transition: 1s; }
+header   #menu-principal{ line-height: 45px; }
+header   .sub-menu{ line-height: 20px; }
+
+#informations{ float: left; width: 20%; color: #fff;  line-height: 45px; }
+.nomDuSite{ color: #fff;  padding: 2px 30px; }
+.texte-description{ float: right; font-style: italic; font-size: 10px; line-height: 45px; color: #fff; margin-right: 5%;}
+
+nav{ float: left; position:relative; }
+nav  ul.sub-menu {display:none; width:150px; position: absolute;}
+nav  li {background:#CCCCCC; float: left; } /* facultatif */
+nav  li a {text-decoration: none; padding: 2px 0 2px; display:block; width:150px;}
+nav  ul {padding: 0; margin:0px; text-align:center;}
+nav  ul  li.menu-item-has-children:hover   ul.sub-menu{display:block; background: #4a515b;  transition: all 1s;}
+
+nav  li:hover {background: #EDD;  transition: all 1s; } /* facultatif */
+nav  ul.sub-menu:hover {background: #EBB;}  /* facultatif */
+
+/***************** HEADER+MENU *****************/
+/***************** SECTION *****************/
+section{ padding: 30px; } 
+.conteneur{ margin: 0 auto; max-width: 1170px; }
+.home  #entete{ min-height: 537px;   background: url(assets/1.jpg) no-repeat; width: 100%; background-size: cover;  display: inline-block; }
+
+.slogan{ color: #fff; text-align: center; font-size: 30px; margin: 100px 0 100px 0; }
+.recherche #s{  background: #fff url(assets/loupe.png) center left no-repeat; width: 30%; padding: 10px 10px 10px 40px; font-size: 15px; }
+.recherche  #submit-search{padding: 8px; }
+.recherche  #submit-search:hover{ cursor: pointer; }
+.recherche {  text-align: center;  }
+/***************** SECTION *****************/
+
+/*
+.conteneur-video{ width: 100%; height: 300px; position : relative; }
+video{  position: absolute; width: 100%; height: 30%; }
+*/
+.contenu-category  em{ display : none; }
+
+.acf-map {
+	width: 100%;
+	height: 400px;
+	border: #ccc solid 1px;
+	margin: 20px 0;
+}
+
+/* fixes potential theme css conflict */
+.acf-map img {
+   max-width: inherit !important;
+}
+
+footer{
+background: #dedede;
+text-align: center;
+min-height: 50px;
+}

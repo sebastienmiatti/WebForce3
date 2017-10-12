@@ -1,0 +1,1 @@
+<?php printf( __( 'Search Results for: %s', 'twentyfifteen' ), get_search_query() ); ?>

@@ -1,0 +1,107 @@
+/*
+	Theme Name: theme_bb
+	Author: Yakine
+	Description: Thème créé en cours de Wordpress avec l'équipe de Villeneuve !
+	Text Domain: theme_bb
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;	
+}
+
+body{ font-family: 'Roboto'; font-size: 14px; margin: 0; background: #f2f2f2;}
+
+/****************HEADER + MENU *****************/
+header{
+	margin: 0; 
+	text-align: center;
+	background: #4a515b;
+	height: 50px;
+	text-transform: UPPERCASE;
+	position: relative;
+}
+
+nav{position: relative;} 
+
+header li{display: inline; list-style: none;}
+
+header ul{margin: 0;}
+
+header a{display: inline-block; color: #fff; padding: 0 15px; text-decoration: none;}
+
+header a:hover{background: #3e88be; transition: 1s;}
+
+header #menu-principal{line-height: 45px;}
+
+header .sub-menu{ line-height: 20px;}
+
+header #informations{float: left; width: 20%; color:#fff; line-height: 45px;}
+
+.nomDuSite{color: #fff; padding: 2px 30px;}
+
+.text-description{float:right; font-style:italic; font-size:10px; line-height: 45px; color: #fff; margin-right: 5%}
+
+nav{float: left; position: relative;}
+nav ul.sub-menu{display: none; width:150px; position: absolute;}
+nav li{background: #CCCCCC; float:left;}
+nav li a{text-decoration: none; padding: 2px 0 2px; display: block; width: 150px;}
+nav ul{padding: 0; margin: 0px; text-align: center;}
+
+nav ul li.menu-item-has-chidren:hover ul.sub-menu{display: block; background: #4a515b; transition: all 1s;}
+
+
+/************** HEADER + MENU ****************/
+/************** SECTION *********************/
+section{padding: 30px;}
+.conteneur{margin: 0 auto; max-width: 1170px;}
+.home #entete{min-height: 537px; background: url(assets/resto1.jpg) no-repeat; width: 100%; background-size: cover; display: inline-block;}
+
+.slogan{color: #fff; text-align: center; font-size: 30px; margin: 100px 0 100px 0;}
+.recherche #s{background: #fff; width: 30%; padding: 10px 10px 10px 40px; font-size: 20px;}
+.recherche #submit-search{padding: 8px;}
+.recherche #submit-search:hover{cursor: pointer;}
+.recherche{text-align: center;}
+
+/************* FOOTER ***********************/
+footer{
+	background: #dedede;
+	text-align: center;
+	min-height: 50px;
+}
+
+#logo{
+	width: 50px;
+	height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
