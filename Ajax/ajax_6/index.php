@@ -6,11 +6,13 @@
 		<title></title>
 	</head>
 	<body>
-		<form method="POST">
-		<div id="resultat">
-		</div>
 
-		<input type="submit" id="submit" value="envoyer">
-	</form>
+		<form method="POST">
+			<fieldset>
+				<div id="resultat"></div>
+				<input type="submit" id="submit" value="envoyer">
+			</fieldset>
+		</form>
+
 	</body>
 </html>
