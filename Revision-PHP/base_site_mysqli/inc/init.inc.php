@@ -11,8 +11,8 @@ session_start();
 
 //-------------------------- CHEMIN
 
-define("RACINE_SITE", $_SERVER['DOCUMENT_ROOT'] . "/base_site_mysqli/");
-define("URL", "http://localhost/base_site_mysqli/");
+define("RACINE_SITE", $_SERVER['DOCUMENT_ROOT'] . "/htdocs-SEB/WebForce3/Revision-PHP/base_site_mysqli/");
+define("URL", "http://localhost/htdocs-SEB/WebForce3/Revision-PHP/base_site_mysqli/");
 
  /* RACINE_SITE . "<hr>";
  echo URL; */
