@@ -3,9 +3,8 @@
 if(isset($_GET['lang'])){ // cela signifie que l'utilisateur vient à l'instant de cliquer sur un des liens pour choisir une langue
 $langue= $_GET['lang'];
 
-}elseif(isset($_COOKIE['lang'])){ // cela signife que l'utilisateur était déjà venu, et j'avais déjà enregistré son choix dans un cookie.
-    $langue = $_COOKIE['lang'];
-
+}elseif(isset($_COOKIE['pays'])){ // cela signife que l'utilisateur était déjà venu, et j'avais déjà enregistré son choix dans un cookie.
+    $langue = $_COOKIE['pays'];
 
 }else{ // je n'ai ni cookie, ni get précisant la langue, il est possible que l'utilisateur vienne pour la première fois et que la langue par defaut lui convienne très bien.
     $langue = 'fr';
