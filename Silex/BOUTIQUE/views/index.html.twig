@@ -1,0 +1,41 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block css_additionel %}<link rel="stylesheet" href="{{ asset('/css/style_home.css') }}" type="type/css" />{% endblock %}
+
+{% block slide_show %}
+<div style="height: 200px; width:100%; background:yellow; margin: 40px auto;">
+</div>
+{% endblock %}
+
+
+{% block content %}
+    </h1>Boutique</h1>
+    <div class="boutique-gauche">
+      <ul>
+        <li><a href="/">Tous les produits</a></li>
+            {% for categorie in categories %}
+            <li><a href="{{ path('boutique', { 'categorie' : categorie.categorie })}}">{{ categorie.categorie }}</a></li>
+            {% endfor %}
+        <!-- La boucle ci-dessus parcourt tous les résultats de la requête SELECT DISTINCT CATEGORIE FROM PRODUIT. Le résultat un tableau multidimentionnel dans lequel à chaque indice (0, 1, 2 etc..) on récupère un array, avec la catégorie à l'indice 'categorie'. Donc $categories[$i]['categorie'] nous affiche chaque catégorie. -->
+      </ul>
+    </div>
+
+    <div class="boutique-droite">
+        {% for pdt in produits %}
+        <!-- Debut vignette produit -->
+        <div class="boutique-produit">
+          <h3>{{pdt.titre}}</h3>
+          <a href="{{ path('produit',{ 'id' : pdt.id_produit }) }}"><img src="{{ asset('/photo/' ~ pdt.photo) }}" height="100"/></a>
+          <p style="font-weight: bold; font-size: 20px;">{{ pdt.prix }}€</p>
+
+          <p style="height: 40px">{{ pdt.description | striptags | slice(0, 40) }}...</p>
+          <a href="{{ path('produit',{ 'id' : pdt.id_produit }) }}" style="padding:5px 15px; background: red; color:white; text-align: center; border: 2px solid black; border-radius: 3px" >Voir la fiche</a>
+          <!-- href="fiche_produit.php?id=id_du_produit" -->
+        </div>
+        {% endfor %}
+        <!-- Fin vignette produit -->
+    </div>
+
+    {% endblock %}

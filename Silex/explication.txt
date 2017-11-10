@@ -1,0 +1,539 @@
+-----------------------------
+SILEX :
+-----------------------------
+SOMMAIRE : Qu'est-ce que Silex ?
+ETAPE 0 : Base de notre app : site_mvc (procédural)
+ETAPE 1 : Installation de Silex
+ETAPE 2 : Démarrage et Compréhension
+ETAPE 3 : Le Routing avec Silex
+ETAPE 4 : Virtual Host
+ETAPE 5 : HTACCESS : On retire 'index.php'
+ETAPE 6 : Démarrage de notre application BOUTIQUE
+ETAPE 7 : Utilisation des services Silex (Doctrine DBAL)
+ETAPE 8 : Utilisation des services Silex (Twig)
+ETAPE 9 : Utilisation des services Silex (Bootstrap)
+ETAPE 10 : Ajout des commentaires à nos produits (Injection de dépendance)
+ETAPE 11 : La class DAO (design pattern: transformer un tableau multidimentionnel composé d'array, en un tableau multidimentionnel composé d'objet)
+ETAPE 12 : Héritage TWIG
+ETAPE 13 : Gestion de la sécurité (Connexion)
+ETAPE 14 : Class MembreDAO et userProviderInterface (model)
+ETAPE 15 : Formulaire de connexion
+ETAPE 16 : Formulaire d'inscription
+ETAPE 17 : Formulaire de contact
+ETAPE 18 : BACKOFFICE
+ETAPE 19 : Réorganisation en Controller
+ETAPE 20 : Préparation de la mise en prod
+
+
+------------------------------
+INTRO : qu'est-ce que Silex
+------------------------------
+
+1/ Avantage à utiliser un Framework ?
+    A/ Choix d'une organisation optimisée. Il est tres difficile de conceptualiser soi-meme une application en objet (un framework maison). Ou vont les controller ? Les models ? Les vues ?
+    Aucune réponses n'est parfaite mais chacun à sa propre organisation cohérente... ou pas.
+
+    B/ Fonctionnalitées communes :  un framework permet de récuperer des briques deja existante.. et les récuperer du site A vers le site B etc..(Briques : Connexion, inscription, session, commentaires...)
+
+    C/ Services disponibles : Tous les framework proposent des services, le routage(routing), la sécurité, la gestion du cache etc...
+    Cela permet de vous concentrer et de passer plus de temps au dévellopement de vos propres fonctionnalités !
+
+2/ Quel choix de Framework?
+    A/ Son propre Framework maison ?
+    Tres formateur!! On peut toujours l'améliorer et l'utiliser dans des projets persos.. par contre : pas de communauté, pas de documentation et c'est difficile de garantir tous les aspects de sécurité.
+
+    B/ Framework du marché :
+        -Framework FullStack (Symfony, Zend, Cake) : Beaucoups de services disponibles, grosse communauté, mais un déploiement très lourd et une architecture IMPOSEE.
+
+    C/ Mini-Framework (Laravel et Silex) : Proposent des services 'a la carte', et une architecture plus souple.
+
+3/ Et Silex dans tout ca ?
+    A/ Siles est un framework developpé par les équipes SensioLabs, qui sont les créateurs de symfony. Il repose sur les memes composants.
+
+    B/ On dit que Silex est un mini-Framework, parfait pour l'apprentissage, et la compréhension de la logique Framework. Parfait également pour developper des applications rapidement et premiere étape interessante dans l'apprentisage de symfony.
+
+    C/ Documentation : https://silex.sensiolabs.org/doc/2.0
+
+-------------------------------------------
+ETAPE 0 : Base de notre app :  site_mvc (procédural)
+-------------------------------------------
+Pour commencer la compréhension de Silex, nous allons partir sur la base d'un morceau de site en procédural et en MVC afin d'avancer étape par étape :
+
+silex/site_mvc
+-> Css/ (copier de votre ancien site procédural)
+-> photo/ (copier de votre ancien site procédural)
+-> index.php
+-> model.php
+-> view.php
+
+-------------------------------------------
+ETAPE 1 : Intstallation de Silex
+-------------------------------------------
+Sommaire:
+1/ Installation de Composer
+2/ Création du dossier BOUTIQUE
+3/ Commande pour télécharger les composants de Silex
+3.Bis/ Autres technique pour télécharger les composant de Silex
+4/ Tour d'horizon des composants.
+
+    1/ installation de composer
+    Composer est un outil de gestion des dépendances. Il permet d'installer des services (composant, dépendances) et est relié à un fichier composer.json.
+    -> Télécharger composer
+    -> Installer composer (en précisant php.exe)
+
+    2/ creation du dossier silex/BOUTIQUE/
+
+    3/ Commande pour télécharger les composants de silex:
+    -> On se place dans le dossier BOUTIQUE/
+    -> Maj+ clickDroit > "Ouvrir la fençtre de commande ici"
+
+
+    <cmd>
+    composer require silex/silex "~2.0"
+
+    3.Bis/ composer.json :
+    <code>
+   {
+       "require": {
+           "silex/silex": "~2.0"
+       }
+   }
+</code>
+
+<cmd>
+   composer update
+</cmd>
+
+4 - Les composants
+   Le dossier Vendor correspond aux coeur de notre Framework. Il contient tous les composants récupéré de Silex/Symfony, sur lesquels nous n'interviendront JAMAIS !!!
+
+-----------------------------------------
+ETAPE 2 : Démarrage et Compréhension
+-----------------------------------------
+Sommaire:
+1/ Création du répertoire web/
+2/ Création du fichier index
+
+1/ repertoire web/
+    ->A la racine d enotre  application BOUTIQUE/web/
+    ->Ce dossier constiute notre repertoire web, cela signifie qu'il va contenir tou ce qui est visible et accessible pour l'internaute.
+    (index.php, photos, img, fonts, js, css...)
+
+2/ créer web/index.php
+    -> D'abord on require l'autoload qui se chargera de require tous les fichiers dont on aura besoin. PRATIQUE!!!
+
+    -> On instancie la classe Application : L'objet $app va représenter notre application et nous donne accès à toutes les fonctionnalités de Silex.
+    Dont une fonctionnnalité la Méthode run() : Lancement de l'application
+
+------------------------------------
+ETAPE 3 : Le routing sur Silex
+------------------------------------
+Sommaire:
+1/ Route Hello World
+2/ Route Hello {$name}
+3/ La fonction Get de notre application
+4/ Arguments
+5/ fonction escape()
+-----
+
+1/ Route Hello World
+-> $app-> get() est la fonction qui nous permet de créer une nopuvelle route. chaque route est une action dans notre application. Ensuite nous rangerons toutes nos action dans des controllers, pour optimiser notre organisation.
+
+2/ Route Hello {$name}
+    -> Création de la route /hello/{name}
+    -> Test : localhost/silex/BOUTIQUE/web/index.php/hello/sebastien
+
+3/ La fonction get
+    -> A chaque nouvelle fonctionnalité, on va utiliser la fonction get de $app, qui nous créer une nouvelle route. En plus de GET, il existe post() et match(). Nous les verrons plus tard.
+
+4/ Arguments:
+    -> le premier argument est le nom de la route. Les paramètres contenus dans les URL sont alors déclaré entre accolades.
+    -> le second argument fonction() est ce que l'on appelle une "closure" ou "fonction anonyme". Elle signifie que ce qu'il va suivre sera exécuté. Elle peux recevoir les paramètre dynamique de notre URL(ex: function($name)).
+
+5/ La méthode escape()
+    -> La fonction escape() permet simplement d'afficher le paramètre contenu dans la route. La méthode escape() permet d'éviter les injections SQL dans votre URL.
+
+----------------------------------
+ETAPE 4 : Virtual Host
+----------------------------------
+Sommaire:
+1/ Modifier le fichier vhost (apache)
+2/ Modifier le fichier conf (apache)
+3/ Modifier le fichier Host (system 32)
+
+1/ Modification du fichier vhost :
+    > c:\xampp\apache\conf\extra\httpd-vhosts.conf2/ Modification du fichier conf :
+
+    > c:\xampp\apache\conf\httpd.conf3/ Modification du fichier Hosts dans system32
+
+    > c:\windows\system32\drivers\etc\hosts
+
+______________________________
+
+<code> :
+  ## Virtual Host pour le projet BOUTIQUE (silex)
+  <VirtualHost *:80>
+      DocumentRoot "C:\xampp\htdocs"
+      ServerName localhost
+  </VirtualHost>    <VirtualHost *:80>
+      DocumentRoot "C:\xampp\htdocs\silex\BOUTIQUE\web"
+      ServerName BOUTIQUE
+      ServerAlias www.boutique.dev
+      <Directory "C:\xampp\htdocs\silex\BOUTIQUE\web">
+          AllowOverride all
+      </Directory>
+  </VirtualHost>
+  2/ Modification du fichier conf :
+  > c:\xampp\apache\conf\httpd.conf
+
+  On vérifie que cette ligne est bien décommentée :
+  # Virtual hosts
+  include conf/extra/httpd-vhosts.conf
+  3/ Modification du fichier Hosts dans system32
+  > c:\windows\system32\drivers\etc\hosts    <code>
+  127.0.0.1   localhost
+  127.0.0.1   www.boutique.dev
+
+
+===========================================
+Etape 5  : HTACCES : On retire 'index.php'
+===========================================
+
+  -> Créer dans le dossier web de notre application, test.txt
+
+     <code>
+     <IfModule mod_rewrite.c>
+         Options -MultiViews
+
+         RewriteEngine On
+         RewriteCond %{REQUEST_FILENAME} !-f
+         RewriteRule ^ index.php [QSA,L]
+     </IfModule>
+
+     -> Enregistrer le fichier avec l'extension .htaccess. Pour ce faire, selectionner tous les formats
+
+
+  Test à effectuer : www.boutique.dev/hello/Alpha (edited)
+
+===================================================
+Etape 6  : Démarrage de notre application BOUTIQUE
+===================================================
+
+  Sommaire :
+    1/ Création des dossiers
+    2/ Récupérer les fichiers (de notre base site_mvc)
+    3/ Création du fichier de routes
+    4/ Ré-écriture de index.php
+  --------------------------------------
+
+    1/ Création des dossiers :
+      BOUTIQUE/
+          web/      (déjà créé)
+          vendor/ (déjà crée)
+          app/     (config de l'application)
+          db/     (script de creation de la bdd)
+          src/     (fichiers sources de notre application)
+          views/     (les vues de notre application)
+
+    2/ Récupérer les fichiers (de notre base site_mvc)
+          Dans un premier temps on va gérer l'affichage de nos produits (boutique.php)
+            -> model.php à copier/coller dans src/
+            -> view.php à copier/coller dans views/
+            -> css/ photo/ fonts/ à copier/coller dans web/
+
+    3/ Créez un fichier de route (qui va contenir toutes nos routes)
+      -> app/routes.php
+      -> on recréer la route '/' (la home), dans laquelle on va récupérer les infos de tous nos produits(râce à model.php
+      et sa fonction afficheAll()) et on les affiche via la concept render() (temporisation puis affichage)
+
+    4/ Réécriture de index.php
+      -> A ce stade nous n'avons plus besoin des 2 routes dans index.php mais on a besoin de require
+      notre fichier de routes (routes.php)
+      -> On ajoute le mode debug car nous sommes en dev.
+
+  Test à effectuer : www.boutique.dev
+    A ce stade nous devrions avoir la boutique qui s"affiche sur la home de notre nouveau site.
+    En revanche, nous sommes en procédural... il va donc falloir ajouter une couche OBJET.
+
+===================================================
+Etape 7  : UTILISATION DES SERVICES SILEX:
+Doctrine DBAL modélisation objet
+===================================================
+Sommaire:
+1/ Création de la class Produit dans src/Entity
+2/ Remplacement de PDO par Doctrine DBAL
+3/ Créer le dossier DAO (Data Acces Object)
+4/ Ajouter le fichier ProduitDAO.php
+5/ Mise a jour de l'application via composer
+6/ Création du fichier app.php dans app/
+7/ Création du fichier prod.php dans app/config/
+8/ Création du fichier dev.php dans app/config/
+9/ Modification des routes
+10/ Modification de la vue
+11/ Modification de l'index
+-----------------
+
+    1/ Création de la class Produit dans src/Entity
+        -> Création de la class Produit dans src/Entity/Produit.php
+        -> Cette class va servir de plan de fabrication d'un objet produit. Un prototype. Il contient toutes les ropriétés de l'entité produit (private) et tous les getter/setter.
+    On dit que cette class est POPO (Plain OLD php Object)
+
+    2/ Remplacement de PDO par Doctrine DBAL
+        -> Doctrine DBAL ( Database Abstract Layer) // Fait la meme chose que PDO mais améliore le systeme de requete. Ce service de Silex, nous permet également une connexion compatible avec tout type de gestion de BDD. Il nous récupère la connexion dans un SINGLETON sans qu'on ait besoin de la faire nous même.
+
+    3/ Créé un dossier DAO dans src (Data Access Object)
+        -> DAO est un design pattern (morceaux de code récupéré) qui répond a la question: Comment récupérer des infos depuis la base de données non pas sous forme d'array;
+         mais sous forme d'objets? ===> voir la méthode (buildProduit())
+
+
+    4/ Création du Fichier ProduitDAO.php dans src/DAO/
+        -> Ce fichier correspond a notre MODEL PRODUIT. C'est lui qui va gérer toutes les requetes aupres de la table produit, et nous renvoyer les résultat sous forme d'objets.
+        -> Récupérerla connexion a la BDD grace a Doctrine\DBAL\Connection
+        -> On stocke cette connexion  dans la propriété private $db
+        -> Chaque requete sur la table Produit sera représenté par une fonction (findAll, findById, findAllByCategorie, fincAllCategorie etc...)
+        -> Pous chacunes de ces requetes, quand cela est possible on va transformer les résultat d'array en objet grâce a la méthode buildProduit().
+
+        ----> DAO est un designe pattern qui permet de modéliser sous forme d'objet(Entity) les résultats d'une requete.
+
+    5/ Mise a jour de l'application via Controller
+        -> Modifier notre fichier composer.json
+        <code>
+            {
+                "require": {
+                    "silex/silex": "~2.0",
+                    "doctrine/dbal": "2.5"
+                }
+                "autoload": {
+                    "psr-4" : {"BOUTIQUE\\": "src"}
+                }
+            }
+        <cmd>
+        composer update
+
+        -> Cette commande a fait:
+            - Récupérer les composant Doctrine dbal
+            - Mise a jour l'autoload selon la norme PSR-4 qui signifie : les noms des namespace correspondent a des nom de dossier.
+
+    6/ Création du fichier app.php dans le dossier app/
+        -> Ce fichier représente les paramètres de notre application. Quand vous déplacerez votre application d'un server à un autre en théorie vous ne devrez modifier que ce fichier la... a l'instar de init.inc.php dans notre procédural.
+
+        -> les deux premieres lignes (use ErrorHandle et ExceptionHandler) permettent a notre application de gerer les erreurs sous forme d'exception.
+        Les composant Symfony prennent la main sur la gestion des erreurs PHP.
+
+        -> Ensuite on enregistre le fournisseur de service associé a Doctrine DBAL.
+        A faire pour tous les services utilisé.
+
+        -> Enfin on déclare/enregistre notre class Produit DAO dans notre $app['dao.produit']. Cela nous permettra de rendre plus simple l'utilisation de notre instance de la class ProduitDAO. $app['db'] représente par ailleur notre connexion a la BDD grace a Doctrine DBAL.
+
+
+    7/ Création du fichier prod.php dans app/config
+        -> Ce fichier contient toutes les infos de connewion a la BDD.
+
+    8/ Création du fichier dev.php dans app/config
+        -> Ce fichier contient les infos relative à la phase de dev.
+
+    9/ Modificatiopn du fivier routes!/php
+        -> On remplace l'ancien require model.php qui nous permettait d'acceder a la méthode afficheAll() par une installation de ProduitDAO ($app['produitDAO']) qui est notre nouveau model. Dans ce nouveau model on exécute findAll() et findAllCategorie.
+        ===> La logique Controller / Model reste la meme qu'auparavant.
+
+        /!\ ATTENTION : Dans notre vue view.php, nous utilisons des arrays($produit['titre']) mais maintenant on doit utiliser des objets ($produit -> getTitre())
+
+    10/ Modification de view.PHP
+        -> On remplace les arrays par l'utilisation des getter:
+        ARRAY : <?= $pdt['titre'] ?>
+        OBJET : <?= $pdt-> getTitre() ?>
+        TWIG : <?= {{ pdt.titre }} ?>
+
+    11/ Modification du fichier index.php
+        -> on met en commentaire $app['debug'] = true; puis que nous l'avons mis dans dev.php
+        -> On ajoute les require de app et dev avant le require de route.php
+
+    ==> A ce stade, notre home doit afficher tous les produits, et le menu des categories.
+    ==> Cette etape nous a permis d'introduire une modélisation objet (propre a silex : DAO, Routing..)
+    ==> Nous avons beaucoup travaillé la partie MODELS (DAO) et CONTROLLER (Routes.php), à l'étape suivante nous allons nous intéresser a la partie VIEWS avec Twig
+
+
+---------------------------------------
+ETAPE 8 : UTILISATION DES SERVICES SILEX (Twig) :
+(Ajout de l'utilisation de la fonction render)
+---------------------------------------
+Sommaire:
+1/ Intro
+2/ Modification composer.Json
+3/ Mise à jour via Composer
+4/ Modification de app.php (enregistrement des nouveaux services)
+5/ Modification des fichiers view.php, produit.php en Twig
+6/ Fonction render() : modification des routes
+-----
+
+    1/ INTRO
+     smarty = prestashop
+     TPL = shopify
+     -> Il existe plusieurs moteurs template : Liquid, TPL, smarty, Blade, Twig.
+     Pour symfony et Silex, le moteur c'est TWIG.
+     -> De maniere générale un moteur de template permet de simplifié l'insertion de variables et de boucles PHP des blocs HTML. (idée des formes contractée)
+     -> TWIG à l'avantage de proposer un système d'héritage. En d'autres termes, des morceaux d'HTML vont hérité d'autres morceaux HTML. Exemple : Le formulaire d'inscription hérite du template générale de la page.
+
+     2/Modification du Json :
+     <code>
+     {
+        "require": {
+            "silex/silex": "~2.0",
+            "doctrine/dbal": "2.5",
+            "twig/twig": "~1.28"
+        },
+        "autoload": {
+            "psr-4" : {"BOUTIQUE\\": "src"}
+        }
+    }
+
+    3/ Mise a jour via Composer
+        <cmd>
+        composer update
+
+    4/Modification de app.php
+        ->enregistrement aux services Twig
+        -> L'enregistrement nécessite qu'on passe en argument le chemin de nos vues
+
+        <code>
+        $app -> register(new Silex\Provider\TwigServiceProvider(),
+        array(
+        'twig.path' => __DIR__ . '/../views'
+        ));s
+
+    5/ Modification de nos vues :
+    -> view.php ==> index.html.twig
+    -> produit.php ==> produit.html.twig
+
+    <php>
+    // Commentaire en php
+    <?php foreach($produits as $pdt) : ?>
+    $pdt -> getTitre()
+    <?php endforeach; ?>
+
+    <twig>
+    {# commentaire en twig #}
+    {% for pdt in produits %}
+        {{pdt.titre}}
+    {% enfor %}
+
+    6/ Modification des Routes
+        -> ajout de la méthode render()
+        -> la méthode render() est globalement commune a toutes les applications OBJET/MVC bien modelsier.
+        Elle va rendre une vue, et embarquer tous les paramètres dynamique nécessaires a cette vue.
+        -> Les paramètres emmbarqués , sont toujours sous forme d'un array.
+        ==> A ce stade, notre home doit s'afficher. Test : www.boutique.dev
+        ==> En savoir plus sur TWIG : https//twig.symfony.com/
+
+--------------------------------------------------
+ETAPE 9 : UTILISATION DES SERVICES SILEX (Assets):
+--------------------------------------------------
+Sommaire:
+    1/ Modification de composer.Json
+    2/ Mise a jour des services
+    3/ Modification de app.php
+    4/ Modification des vues ( chemin css/js/image)
+    5/ Modification des vues (liens)
+------------------------
+    1/Modification de composer.json
+    <code>
+    {
+        "require": {
+            "silex/silex": "~2.0",
+            "doctrine/dbal": "2.5",
+            "twig/twig": "~1.28",
+            "symfony/asset": "~2.8|3.0.*"
+        },
+        "autoload": {
+            "psr-4" : {"BOUTIQUE\\": "src"}
+        }
+    }
+
+    2/
+    <cmd>
+    composer update
+    composer require symfony/twig-bridge
+
+    3/ Modification du fichier app.php
+    <code>
+    $app -> register(new Silex\Provider\AssetServiceProvider(), array(
+        'assets.version' => 'v1'
+    ));
+
+    4/ Modification des chemin css/js/photo
+    -> On modifie tous les chemin des ressources de cette maniere
+        src="/photo/{{ pdt.photo }}"
+        href="../css/style.css"
+        href="../bootstrap/js/bootstrap.min.js"
+
+        src="{{ asset('/photo/' ~ pdt.photo) }}"
+        href="{{ asset('/css/style.css') }}"
+        href="{{ asset('/bootstrap/js/bootstrap.min.js') }}"
+
+    5/ Modification des vues et des routes:
+        -Liens :
+          -href="/profil/"
+          -href="/boutique/{{ categorie.categorie}}"
+          -href="/produit/{{ pdt.id_produit}}"
+
+          href="{{ path('profil') }}"
+          href="{{ path('boutique', {'categorie : categorie.categorie'}) }}"
+          href="{{ path('produit',{'id' : pdt.id_produit}) }}"
+
+          -> Chaque route va avoir un nom :
+            $app -> get('/profil/', function() use($app)
+            {    //traitement ...
+                //traitement ...
+            }) -> bind('profil');
+
+            $app -> get('/boutique/{categorie}'
+
+            )-> bind('boutique');
+
+
+            $app -> get('/produit/{id}')
+
+            -> bind('produit');
+
+            -> grâce au service assets de Silex, tous nos liens et chemins vont etre dynamisée et absolue.
+            -> Pour cela on utilise asset() (ressources) et path() (lien).
+            Concernant path() pour que cela fonctionne, il faut que toutes nos routes aient un nom.
+
+--------------------------------
+ETAPE 12 : héritage Twig :
+--------------------------------
+Sommaire:
+    1/ Créer le fichier layout.html.twig (structure de page) dans view/
+    2/ Modifier nos vues
+
+    1/ Création du fichier layout.html.twig
+        -> On y met toute la structure d'une page
+        <!DOCTYPE html>
+        ...
+        <section>
+        {% block content %}
+
+        {% endblock %}
+        </section>
+        </html>
+
+    2/ Modifier les vues :
+        <code>
+        {% extends 'layout.html.twig' %}
+        {% block content %}
+            *****Contenu de la page*****
+            {% endblock %}
+
+-----------------------------------
+ETAPE 17 : FORMULAIRE DE CONTACT
+-----------------------------------
+Sommaire:
+    1/ création de la route(render)
+    2/ Faire le fichier contact.html.twig
+    3/ Créer ContactType (la class qui va nous construire le formulaire )
+        -> mise a jour de l'app (json + composer)
+        -> enregistrement service form
+        -> Form/Type/ContactType
+    4/ Modifier la route (récupération du formulaire)
+    5/ Modifier la vue contact.html.twig
+    6/ Modifier la route (traitement de l'email)

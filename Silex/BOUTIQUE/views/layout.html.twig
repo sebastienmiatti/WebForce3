@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+    <head>
+      <title>Mon Site - {% block title %}{{ title }}{% endblock %}</title>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" href="{{ asset('/css/style.css') }}"/>
+      <link rel="stylesheet" href="{{ asset('/bootstrap/js/bootstrap.min.js') }}"/>
+      {% block css_additionel %}{% endblock %}
+      {% block js_additionel %}{% endblock %}
+    </head>
+<body>
+  <header>
+    <div class="conteneur">
+      <span>
+        <a href="{{ path('home') }}" title="Mon Site">MonSite.com</a>
+      </span>
+      <nav>
+        <a href="#">Connexion</a>
+        <a href="#">Inscription</a>
+        <a href="{{ path('profil') }}">Profil</a>
+        <a href="#">Panier</a>
+        <a href="{{ path('home') }}">Boutique</a>
+      </nav>
+    </div>
+  </header>
+
+  {% block slide_show %}{% endblock %}
+
+  <section>
+    <div class="conteneur">
+
+         {% block content %}
+         {% endblock %}
+
+    </div>
+</section>
+    <footer>
+        <div class="conteneur">
+          {{ "now"|date("Y") }} - Tous droits reservés.
+        </div>
+    </footer>
+</body>
+</html>

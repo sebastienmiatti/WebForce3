@@ -1,0 +1,39 @@
+{# Si membre est admin on extends un layout admin, sinon le layout normal #}
+{% extends membre.statut == '1' ? 'layout_admin.html.twig' : 'layout.html.twig' %}
+
+{% block content %}
+		<!-- CONTENU HTML -->
+		<h1>Profil de {{ membre.pseudo }} </h1>
+		<div class="profil">
+			<p>Bonjour {{ membre.pseudo }} !!</p><br/>
+
+			<div class="profil_img">
+				{% if membre.photo is defined %}
+				<img src="{{ asset('/photo/' ~ membre.photo) }}"/>
+				{% else %}
+				<img src="{{ asset('/photo/default.jpg') }}"/>
+				{% endif %}
+			</div>
+			<div class="profil_infos">
+				<ul>
+					<li>Pseudo : <b>{{ membre.pseudo }}</b></li>
+					<li>Prénom : <b>{{ membre.prenom }}</b></li>
+					<li>Nom : <b>{{ membre.nom }}</b></li>
+					<li>Email : <b>{{ membre.email }}</b></li>
+				</ul>
+			</div>
+			<div class="profil_adresse">
+				<ul>
+					<li>Adresse : <b>{{ membre.adresse }}</b></li>
+					<li>Code Postal : <b>{{ membre.code_postal }}</b></li>
+					<li>Ville : <b>{{ membre.ville }}</b></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="profil">
+			<h2>Détails des commandes</h2>
+			<p>Vous n'avez pas encore passé de commande !<br/>Venez visiter <a href="{{ path('home') }}"><u>notre boutique</u></a></p>
+		</div>
+
+{% endblock %}

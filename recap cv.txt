@@ -1,0 +1,12 @@
+ Ne pas ecrire le nom du département ou le code postal
+ Ne pas mettre notre date de naissance
+ mettre lexpérience actuelle ensuite le reste
+
+-----------------
+ Compétence
+ Formation
+ Expériences(poste, boite, mission ou tache accompli,durée)
+ Centre d'interet
+-------------------
+s'intétiser la plupart des informations.
+ 
