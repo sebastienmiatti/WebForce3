@@ -92,6 +92,34 @@ class ProduitDAO
         return $produits;
     }
 
+    public function save(Produit $produit)
+    {
+        $produitData = array(
+            'id_produit' => $produit -> getId_produit(),
+            'reference' => $produit -> getReference(),
+            'categorie' => $produit -> getCategorie(),
+            'titre' => $produit -> getTitre(),
+            'description' => $produit -> getDescription(),
+            'public' => $produit -> getPublic(),
+            'couleur' => $produit -> getCouleur(),
+            'taille' => $produit -> getTaille(),
+            'stock' => $produit -> getStock(),
+            'prix' => $produit -> getPrix(),
+            'photo' => 'test.png'
+
+        );
+        if($produit -> getId_produit())
+        {
+            // Update
+            $this -> getDb() -> update('produit', $produitData, array('id_produit' => $produit -> getId_produit()
+        ));
+        } else
+        {
+            // Ajout de produit
+            $this -> getDb() -> insert('produit', $produitData);
+        }
+    }
+
 
 protected function buildProduit(array $value){// l'objectif de cette fonction est de transformer un array contenant toutes les info de la class en un objet de la class Entity/Produit
         $produit = new Produit; // Notre POPO qu'on a créé avec ses getter et setter

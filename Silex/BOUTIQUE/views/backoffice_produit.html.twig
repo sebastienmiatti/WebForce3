@@ -1,0 +1,60 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+
+<table border="1">
+
+    <!-- Debut vignette produit -->
+    <!--Ligne de titres-->
+    <tr>
+        <th>Photo</th>
+        <th>Id du produit</th>
+        <th>Titre</th>
+        <th>Référence</th>
+        <th>catégorie</th>
+        <th>Taille</th>
+        <th>Couleur</th>
+        <th>Public</th>
+        <th>Description</th>
+        <th>Prix</th>
+        <th>Stock</th>
+        <th colspan="2">Action</th>
+    </tr>
+
+    <!-- ligne pour chaque produit -->
+    {% for produit in produits %}
+    <tr>
+        <td></td>
+        <td><a href="{{ path('produit',{ 'id' : produit.id_produit }) }}"><img src="{{ asset('/photo/' ~ produit.photo) }}" height="80"/></a></td>
+        <td>{{ produit.id_produit }}</td>
+        <td>{{ produit.titre }}</td>
+        <td>{{ produit.reference }}</td>
+        <td>{{ produit.categorie }}</td>
+        <td>{{ produit.taille }}</td>
+        <td>{{ produit.couleur }}</td>
+
+        {% if produit.public == 'm' %}
+        <td>Homme</td>
+        {% elseif produit.public == 'f' %}
+        <td>Femme</td>
+        {% else %}
+        <td>Mixte</td>
+        {% endif %}
+
+        <td>{{ produit.description }}...</td>
+        <td>{{ produit.prix }}</td>
+        <td>{{ produit.stock }}</td>
+        <td><a href=""><img src="{{ asset('img/edit.png') }}" width="30"></a></td>
+        <td><a href=""><img src="{{ asset('img/delete.png') }}" width="30"></a></td>
+        <!-- href="fiche_produit.php?id=id_du_produit" -->
+    </tr>
+
+    {% endfor %}
+    <!-- Fin vignette produit -->
+</table>
+
+{% endblock %}

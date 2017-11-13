@@ -1,0 +1,57 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+    {% if produitForm %}
+
+    {{ form_start(produitForm) }}
+    <label>Référence : </label>
+    {{ form_errors(produitForm.reference) }}
+    {{ form_widget(produitForm.reference) }}
+
+    <label>Catégorie : </label>
+    {{ form_errors(produitForm.categorie) }}
+    {{ form_widget(produitForm.categorie) }}
+
+    <label>Titre : </label>
+    {{ form_errors(produitForm.titre) }}
+    {{ form_widget(produitForm.titre) }}
+
+    <label>Description : </label>
+    {{ form_errors(produitForm.description) }}
+    {{ form_widget(produitForm.description) }}
+
+    <label>Couleur : </label>
+    {{ form_errors(produitForm.couleur) }}
+    {{ form_widget(produitForm.couleur) }}
+
+    <label>Taille : </label>
+    {{ form_errors(produitForm.taille) }}
+    {{ form_widget(produitForm.taille) }}
+
+    <label>Photo : </label>
+    {{ form_errors(produitForm.photo) }}
+    {{ form_widget(produitForm.photo) }}
+
+    <label>Prix : </label>
+    {{ form_errors(produitForm.prix) }}
+    {{ form_widget(produitForm.prix) }}
+    
+    <label>Stock : </label>
+    {{ form_errors(produitForm.stock) }}
+    {{ form_widget(produitForm.stock) }}
+
+    <label>Public : </label>
+    {{ form_errors(produitForm.public) }}
+    {{ form_widget(produitForm.public) }}
+
+    <input type="submit" value="envoyer l'email">
+    {{ form_end(produitForm) }}
+
+
+    {% endif %}
+
+{% endblock %}
