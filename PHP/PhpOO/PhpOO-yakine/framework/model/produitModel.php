@@ -20,9 +20,9 @@ class ProduitModel
 
     public function getProduitById($id)
     {
-        $resultat = $this("SELECT * FROM produi WHERE id = $id")
+        $resultat = $this("SELECT * FROM produit WHERE id = $id")
     }
-    
+
 }
 
 

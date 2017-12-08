@@ -12,7 +12,7 @@ require('inc/init.inc.php');
 	//traitement pour récupérer toutes les catégories:
 		$resultat = $pdo -> query('SELECT DISTINCT categorie FROM produit');
 		$categories = $resultat -> fetchAll(PDO::FETCH_ASSOC);
-		debug($categories);
+		// debug($categories);
 	//traitement pour récupérer tout les produits:
 		if(isset($_GET['cat']) && !empty($_GET['cat']) && is_string($_GET['cat'])){
 			// Soit une catégorie est demandée dans l'URL
@@ -32,7 +32,7 @@ require('inc/init.inc.php');
 
 // On sort forcément de cette condition avec $resultat qui est soit les résultats d'une requete ciblée par produit, soit tous les produits...
 $produits = $resultat -> fetchAll(PDO::FETCH_ASSOC);
-debug($produits);
+// debug($produits);
 
 
 $page = 'Boutique';

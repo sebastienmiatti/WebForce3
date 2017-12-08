@@ -15,7 +15,7 @@ class PDOManager
 }
 
 
-public functioni getDb(){
+public function getDb(){
     $pdo = new PDO('mysql:host=localhost;dbname=site', 'root','');
     return $pdo;
 }
