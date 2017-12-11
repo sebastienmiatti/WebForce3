@@ -51,5 +51,5 @@ $app -> get('backoffice/produit/', "BOUTIQUE\Controller\BackOfficeController::pr
 // Route pour ajouter un nouveau ProduitType
 $app -> match('/backoffice/produit/add/', 'BOUTIQUE\Controller\BackOfficeController::addProduitAction') -> bind('bo_produit_add');
 
-// Route pour ajouter un nouveau ProduitType
+// Route pour moodifier un nouveau ProduitType
 $app -> match('/backoffice/produit/edit/', 'BOUTIQUE\Controller\BackOfficeController::editProduitAction') -> bind('bo_produit_edit');

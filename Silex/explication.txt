@@ -48,7 +48,7 @@ INTRO : qu'est-ce que Silex
     C/ Mini-Framework (Laravel et Silex) : Proposent des services 'a la carte', et une architecture plus souple.
 
 3/ Et Silex dans tout ca ?
-    A/ Siles est un framework developpé par les équipes SensioLabs, qui sont les créateurs de symfony. Il repose sur les memes composants.
+    A/ Silex est un framework developpé par les équipes SensioLabs, qui sont les créateurs de symfony. Il repose sur les memes composants.
 
     B/ On dit que Silex est un mini-Framework, parfait pour l'apprentissage, et la compréhension de la logique Framework. Parfait également pour developper des applications rapidement et premiere étape interessante dans l'apprentisage de symfony.
 
@@ -116,7 +116,7 @@ Sommaire:
 
 1/ repertoire web/
     ->A la racine d enotre  application BOUTIQUE/web/
-    ->Ce dossier constiute notre repertoire web, cela signifie qu'il va contenir tou ce qui est visible et accessible pour l'internaute.
+    ->Ce dossier constitue notre repertoire web, cela signifie qu'il va contenir tou ce qui est visible et accessible pour l'internaute.
     (index.php, photos, img, fonts, js, css...)
 
 2/ créer web/index.php
@@ -137,7 +137,7 @@ Sommaire:
 -----
 
 1/ Route Hello World
--> $app-> get() est la fonction qui nous permet de créer une nopuvelle route. chaque route est une action dans notre application. Ensuite nous rangerons toutes nos action dans des controllers, pour optimiser notre organisation.
+-> $app-> get() est la fonction qui nous permet de créer une nouvelle route. chaque route est une action dans notre application. Ensuite nous rangerons toutes nos actions dans des controllers, pour optimiser notre organisation.
 
 2/ Route Hello {$name}
     -> Création de la route /hello/{name}
@@ -183,12 +183,14 @@ ______________________________
           AllowOverride all
       </Directory>
   </VirtualHost>
+
   2/ Modification du fichier conf :
   > c:\xampp\apache\conf\httpd.conf
 
   On vérifie que cette ligne est bien décommentée :
   # Virtual hosts
   include conf/extra/httpd-vhosts.conf
+
   3/ Modification du fichier Hosts dans system32
   > c:\windows\system32\drivers\etc\hosts    <code>
   127.0.0.1   localhost
