@@ -192,7 +192,8 @@ ______________________________
   include conf/extra/httpd-vhosts.conf
 
   3/ Modification du fichier Hosts dans system32
-  > c:\windows\system32\drivers\etc\hosts    <code>
+  > c:\windows\system32\drivers\etc\hosts
+  <code>
   127.0.0.1   localhost
   127.0.0.1   www.boutique.dev
 
