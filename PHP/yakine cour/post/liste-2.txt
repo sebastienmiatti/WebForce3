@@ -1,4 +1,0 @@
-Yakine;Yakine.hamida@gmail.com
-Toto;toto.tata@gmail.com
-Julien;julien.cottet@gmail.com
-Amandine;Amandine.lafaye@gmail.com

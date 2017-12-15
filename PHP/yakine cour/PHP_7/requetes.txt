@@ -1,1 +1,0 @@
-INSERT INTO `annuaire` (`id_annuaire`, `nom`, `prenom`, `telephone`, `profession`, `ville`, `code_postal`, `adresse`, `date_de_naissance`, `sexe`, `description`) VALUES (NULL, 'fkaier', 'sara', '0666666666', 'dev', 'vlg', '92390', '11 allée st exupéry', '1992-05-30', 'f', 'chocolat chocolaté oulala');
