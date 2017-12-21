@@ -158,7 +158,7 @@ if($a > $b){// Si à est supérieur à B
 
 }
 else{// Sinon ( A est inférieur ou égal à B)
-	echo 'NonA n\'est pas supérieur à B <br>';
+	echo 'Non A n\'est pas supérieur à B <br>';
 }
 
 

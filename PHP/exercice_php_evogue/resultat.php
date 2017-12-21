@@ -18,13 +18,12 @@ switch ($_POST['operation']) {
      $result = $_POST['value1'] / $_POST['value2'];
      break;
 
-     default : 
+     default :
      header('location:calculatrice.php');
      break;
 }
 
 echo 'Le résultat est : ' . $result;
-
 
 
 

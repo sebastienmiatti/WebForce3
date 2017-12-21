@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*CSS Document admin sara*/
+
+.navbar{
+    border-radius: 0;
+}
+
+.suppr{
+    width: 50px;
+}
+
+.modif{
+    width: 50px;
+}
