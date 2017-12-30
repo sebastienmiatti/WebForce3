@@ -1,0 +1,90 @@
+p,body{
+	margin:0;
+}
+main{
+	border:2px solid;
+	margin:0 auto;
+	width:960px;
+}
+header{
+	background:#f6523f;
+	height:100px;
+}
+nav{
+	background:#665533;
+	height:30px;
+}
+section{
+	background:red;
+	margin:20px;
+}
+footer{
+	background:#32f65f;
+	height:50px;
+}
+.a,.b,.c,.d{
+	float:left;
+	width:50%;
+	height:250px;
+}
+.a{
+	background:#336699;
+}
+.b{
+	background:#767676;
+}
+.c{
+	background:#fda500;
+}
+.d{
+	background:#aa2355;
+}
+.clear{
+	clear:both;
+}
+/****************************Responsive***********************************/
+@media screen and (max-width:1050px){
+	main{
+		width:750px;
+	}
+}
+/*entre 780px et 1050px, le main fera 750px*/
+@media screen and (max-width:780px){
+	main{
+		width:550px;
+	}
+}
+/*entre 580px et 780px, le main fera 550px*/
+@media screen and (max-width:580px){
+	main{
+		width:100%;
+		border:none;
+	}
+	.a,.b,.c,.d{
+		width:100%;
+		height:125px;
+	}
+	section{
+		margin:0;
+	}
+}
+/*entre 0px et 580px le main fera 100% ainsi que les zones .a .b .c .d*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

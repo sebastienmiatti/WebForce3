@@ -1,0 +1,48 @@
+#zoneDuHaut
+{
+    width: 100%;
+    background: #282A2B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact
+{
+    width: 65%;
+    padding: 0 13px;
+}
+
+#contact p
+{
+    margin: auto;
+    padding: 3px 10px;
+    color: #95938C;
+    display: inline-block;
+}
+
+.reseauSociaux
+{
+    width: 33%;
+    text-align: right;
+    
+}
+
+.reseauSociaux i
+{
+    font-size: 1.8em;
+    color: #95938C;
+    /*margin: 0 10px;*/
+    letter-spacing: 20px;
+    text-align: center;
+}
+
+.reseauSociaux i:nth-child(1):hover, .reseauSociaux i:nth-child(2):hover, .reseauSociaux i:nth-child(3):hover, .reseauSociaux i:nth-child(4):hover
+{
+    background: #282A2B;
+    border-radius: 3px;
+    transition: 0.3s;
+    transform: scale(1.5);
+    color: white;
+    border: 2px outset white;
+}

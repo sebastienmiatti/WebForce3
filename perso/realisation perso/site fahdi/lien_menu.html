@@ -1,0 +1,116 @@
+<!Doctype html>
+<html lang="fr">
+	<head><!--En-tête du document-->
+		<title>Ma page lien menu</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Lemonada|Open+Sans+Condensed:300|Roboto+Condensed" rel="stylesheet"> 
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<meta name="description" content="Mes liens menus en HTML/CSS">
+		<!--Les moteurs de recherches s'en servent pour les recherches-->
+		<meta charset="utf-8">
+		
+	</head>
+	
+	<body><!-- Corps du document-->
+		<header>
+			<!--Zone du haut, ex : bannière, logo, slogan-->
+			<div id="logo">
+				<img src="img/logo.png" alt="logo">
+			</div>
+			<div id="slogan">
+				<h1>Mon premier site en HTML / CSS</h1>
+			</div>
+			<div id="reseauSociaux">
+				<i class="fa fa-facebook-square" aria-hidden="true"></i>
+				<i class="fa fa-twitter-square" aria-hidden="true"></i>
+			</div>
+			<div class="clear"></div>
+		</header>
+		
+		<nav>
+			<!--Zone du menu, les liens pour naviguer sur le site-->
+			<a href="index.html">structure</a>
+			<a href="texte.html">Texte</a>
+			<a href="selecteurs.html">Selecteurs</a>
+			<a href="images.html">Image</a>
+			<a href="position.html">Position</a>
+			<a href="zoning.html">Zoning</a>
+			<a href="tableau.html">Tableau</a>
+			<a href="liste.html">Liste</a>
+			<a href="lien_menu.html" class="active">Lien & menu</a>
+			<a href="formulaire.html">Fomulaire</a>
+			<a href="multimedia.html">Multimédia</a>
+			<a href="animation.html">Animations</a>
+		</nav>
+		<main>
+		<a href="#logo"><button type="button"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button></a>
+			<h2>Liens & menus</h2>
+			<div class="ancre">
+				<a href="#lien">Les liens</a>
+				<a href="#menu">Menu</a>
+				<a href="#menuDeroulant">Menu déroulant</a>
+			</div>
+			<section id="lien">
+				<h3>Les liens</h3>
+				<a href="https://codepen.io" title="se rendre sur le site de CodePen">CodePen</a> is a social development environment for front-end designers and developers.<br>
+				<a href="http://www.google.fr" target="_blank">Google</a> le moteur de recherche.<br>
+				<a href="fichier/cv.doc">Télécharger mon CV</a><br>
+				<a href="fichier/cv.pdf" target="_blank" title="Afficher dans un nouvel onglet">Voir mon CV</a><br>	
+				<a href="#" onclick="window.print()">Imprimer la page</a><br>
+				<a href="http://www.facebook.fr" target="_blank"><img src="img/facebook.ico"></a><br>
+				Cliquez <a href="index.html">ici</a> pour vous rendre sur la page structure.
+			</section>
+			<section id="menu">
+				<h3>Les menus</h3>
+				<nav>
+					<ul>
+						<li><a href="#">Accueil</a></li>
+						<li><a href="#">Parcours</a></li>
+						<li><a href="#">Réalisations</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</section>
+			<section id="menuDeroulant">
+				<h3>Menu déroulant</h3>
+				<nav>
+					<ul class="niveau1">
+						<li><a href="#">Accueil</a></li>
+						<li class="sousMenu"><a href="#">Formation</a>
+							<ul class="niveau2">
+								<li><a href="#">Etudiants</a></li>
+								<li><a href="#">Emploi du temps</a></li>
+								<li><a href="#">Recherche d'emploi</a></li>
+								<li><a href="#">Documents</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Informations</a></li>
+						<li class="sousMenu"><a href="#">Cours</a>
+							<ul class="niveau2">
+								<li><a href="#">Internet</a></li>
+								<li><a href="#">HTML/CSS</a></li>
+								<li><a href="#">CMS</a></li>
+								<li><a href="#">Stats</a></li>
+								<li><a href="#">Réseaux sociaux</a></li>
+								<li><a href="#">Référencement</a></li>
+								<li><a href="#">Marketing</a></li>
+								<li><a href="#">Cahier des charges</a></li>
+								<li><a href="#">Photoshop</a></li>
+							</ul>						
+						</li>
+						<li><a href="#">Mon CV</a></li>
+					</ul>
+				</nav>
+			</section>
+		</main>
+		<footer>
+			<!--zone du bas, ex : liens administratifs, mentions légales, plan du site, CGU, CGV, contact, copyright-->
+		</footer>
+	</body>
+
+</html>
+
+
+
+
+

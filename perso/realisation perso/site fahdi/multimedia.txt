@@ -1,0 +1,90 @@
+<!Doctype html>
+<html lang="fr">
+	<head><!--En-tête du document-->
+		<title>Ma page listes</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Lemonada|Open+Sans+Condensed:300|Roboto+Condensed" rel="stylesheet"> 
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<meta name="description" content="Mes listes en HTML/CSS">
+		<!--Les moteurs de recherches s'en servent pour les recherches-->
+		<meta charset="utf-8">
+		
+	</head>
+	
+	<body><!-- Corps du document-->
+		<header>
+			<!--Zone du haut, ex : bannière, logo, slogan-->
+			<div id="logo">
+				<img src="img/logo.png" alt="logo">
+			</div>
+			<div id="slogan">
+				<h1>Mon premier site en HTML / CSS</h1>
+			</div>
+			<div id="reseauSociaux">
+				<i class="fa fa-facebook-square" aria-hidden="true"></i>
+				<i class="fa fa-twitter-square" aria-hidden="true"></i>
+			</div>
+			<div class="clear"></div>
+		</header>
+		
+		<nav>
+			<!--Zone du menu, les liens pour naviguer sur le site-->
+		</nav>
+		<main>
+			<h2>Listes</h2>
+			<section>
+				<h3>Les listes ul</h3>
+				<ul class="fruit">
+					<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Orange</li>
+					<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Fraise</li>
+					<li><i class="fa fa-arrow-right" aria-hidden="true"></i> Poire</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Listes imbriquées</h3>
+				<ul class="imbriquee">
+					<li class="europe">Europe
+						<ul>
+							<li>France
+							</li>
+							<li>Italie</li>
+							<li>Espagne</li>
+						</ul>
+					</li >
+					<li class="asie">Asie
+						<ul>
+							<li>Chine</li>
+							<li>Japon</li>
+							<li>Laos</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Listes ordonnées</h3>
+				<ol>
+					<li>Html/Css</li>
+					<li>PHP/SQL</li>
+					<li>JS/JQUERY</li>			
+				</ol>
+			</section>
+			<section>
+				<h3>Listes de définitions</h3>
+				<dl>
+					<dt>F</dt>
+					<dd>France</dd>
+					<dd>Finland</dd>
+				</dl>
+			</section>
+		</main>
+		<footer>
+			<!--zone du bas, ex : liens administratifs, mentions légales, plan du site, CGU, CGV, contact, copyright-->
+		</footer>
+	</body>
+
+</html>
+
+
+
+
+

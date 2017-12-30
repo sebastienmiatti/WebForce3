@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    <html lang="fr">
+        <head>
+            <meta charset="UTF-8"> <!--en-tête du document -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.00">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Ma page multimédia</title>
+            <link rel="stylesheet" href="css/style_index.css">
+            <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Monda|Permanent+Marker|Playball" rel="stylesheet">
+            <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+            <meta name="description" content="Ma page multimédia en HTML/CSS">
+            <!-- Google s'en seet pour les moteurs de recherches -->
+        </head>
+
+        <body> <!--corps du document-->
+
+            <header>
+                <!-- zone du haut, ex : bannière, logo, slogan-->
+                <a href="index.html"><div id="logo"><img src="img/logo.png" alt="logo">
+                </div></a>
+                <div id="slogan"><h1> Mon premier site en HTML/CSS </h1>
+                </div>
+
+                <div id="reseauSociaux">
+                    <a href="https://www.instagram.com/tchikito97/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/SebTchikito" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/s%C3%A9bastien-miatti-7b6586145/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/Miattisebastien/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+               </div>
+               <div class="clear"></div>
+            </header>
+
+            <nav>
+                <!-- zone du menu -->
+
+                    <a href="index.html">SITE CV</a>
+                    <a href="realisation.html">Structure</a>
+                    <a href="text.html">Texte</a>
+                    <a href="selecteur.html">Selecteurs</a>
+                    <a href="images.html">Images</a>
+                    <a href="positions.html">Position</a>
+                    <a href="le_zoning.html">Zoning</a>
+                    <a href="lestableaux.html">Tableau</a>
+                    <a href="leslistes.html">Liste</a>
+                    <a href="lesliens.html">Lien & Menu</a>
+                    <a href="lesformulaires.html">Formulaire</a>
+                    <a href="multimedia.html" class="activ">Multimédia</a>
+                    <a href="animations.html">Animations</a>
+
+            </nav>
+
+            <main>
+                <a href="#logo"><button type="button"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button></a>
+
+                <h2>Multimédia</h2>
+                <section class="videoFond">
+                    <h3>vidéo en fond</h3>
+                    <div class="videoTexte">
+                    <video autoplay loop>
+                        <source src="lib/video/videoBackground.webm" type="video/webm">
+                    </video>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa incidunt, veritatis libero magni perferendis voluptatibus tempora odio soluta consectetur. Sequi porro obcaecati, eaque assumenda veniam voluptatibus quidem repellat esse voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur facere similique ea mollitia porro itaque veritatis. Optio aliquam cupiditate laborum blanditiis assumenda quisquam sit repellendus. In facere similique autem dignissimos.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Vidéo Youtube</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/AviwCGI268U" frameborder="0" allowfullscreen></iframe>
+
+                </section>
+
+                <section>
+                    <h3>Audio</h3>
+                    <h4>Format Mp3</h4>
+                    <audio src="lib/audio/son.mp3" controls></audio>
+
+                    <h4>Format Ogg</h4>
+                    <audio src="lib/audio/son.ogg" controls></audio>
+                </section>
+                <section>
+                    <h3>google Maps</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2620.8631468273693!2d2.323527715677178!3d48.93704837929529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f2b2aeafa51%3A0xe5ba99ade19888d8!2s11+All%C3%A9e+Saint-Exup%C3%A9ry%2C+92390+Villeneuve-la-Garenne!5e0!3m2!1sfr!2sfr!4v1501487723371" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </section>
+
+            </main>
+
+            <footer>
+                <!--zone du bas, ex: liens administratifs, mention légales, plan du site, CGU, CGV, contact, copyright-->
+            </footer>
+
+
+
+
+
+
+
+        </body>
+    </html>

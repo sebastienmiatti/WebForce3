@@ -1,0 +1,90 @@
+                            /*----- RESET------ */
+@charset "UTF-8";
+
+*{
+	box-sizing:border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+    outline: 0 none;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{
+	scroll-behavior: smooth;
+}
+
+
+                            /*----- RESET------ */
+
+.slider-wrapper{    /* ajustement conteneur visible avant pour affichage photo*/
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    top: 100px;
+}
+
+.slide-container{ /* insertion d'un conteneur arriere pour les photos*/
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.slide{ /* cadre photo */
+    float: left;
+    height: 100%;
+    width: 400px;
+    color: #fff;
+}
+
+.slide:first-child{ /*premiere photo */
+    background: #19215E;
+}
+
+.slide:nth-child(2){ /* deuxieme photo */
+    background: #626F92;
+}
+
+.slide:nth-child(3){ /*troisième photo */
+    background: #8E9FE6;
+}
+
+.slide:nth-child(4){ /*quatrième photo */
+    background: #000;
+}
+
+.slider-nav{ /* placement fleche de navigation dans le conteneur */
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 170px;
+}
+
+.slider-nav a{ /*ajustement du style des liens de navigation  */
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    background: lavender;
+}
