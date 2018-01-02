@@ -22,7 +22,7 @@ class Model
         }
 
         // __set et __get sont des méthodes magiques qui permmettent de récupéré des infos liées a l'affectation ou a lutilisation de variables nexistant pas ou créé a la vollées (prenom, nom, phone)
-        // puisse que ces variables nexiste pas , onb les stockes dans $âttributes qui est un array
+        // puisse que ces variables nexiste pas , on les stockes dans $âttributes qui est un array
 
         public function __set($key, $value)
         {
