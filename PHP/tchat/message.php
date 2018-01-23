@@ -40,7 +40,6 @@ $resultat = $pdo -> query("
 
 $commentaire = $resultat -> fetchAll(PDO:: FETCH_ASSOC);
 
-
 ?>
 
 <!DOCTYPE html>

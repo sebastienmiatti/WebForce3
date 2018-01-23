@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+    <html lang="fr">
+        <head>
+            <meta charset="UTF-8"> <!--en-tête du document -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Ma page Liens et menu</title>
+            <link rel="stylesheet" href="css/style_index.css">
+            <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Monda|Permanent+Marker|Playball" rel="stylesheet">
+            <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+            <meta name="description" content="Ma page liens et menu en HTML/CSS">
+            <!-- Google s'en seet pour les moteurs de recherches -->
+        </head>
+
+        <body> <!--corps du document-->
+
+            <header>
+                <!-- zone du haut, ex : bannière, logo, slogan-->
+                <a href="index.html"><div id="logo"><img src="img/logo.png" alt="logo">
+                </div></a>
+                <div id="slogan"><h1> Mon premier site en HTML/CSS </h1>
+                </div>
+
+                <div id="reseauSociaux">
+                    <a href="https://www.instagram.com/tchikito97/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/SebTchikito" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/s%C3%A9bastien-miatti-7b6586145/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/Miattisebastien/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+               </div>
+               <div class="clear"></div>
+            </header>
+
+            <nav>
+                <!-- zone du menu -->
+
+                    <a href="index.html">SITE CV</a>
+                    <a href="realisation.html">Structure</a>
+                    <a href="text.html">Texte</a>
+                    <a href="selecteur.html">Selecteurs</a>
+                    <a href="images.html">Images</a>
+                    <a href="positions.html">Position</a>
+                    <a href="le_zoning.html">Zoning</a>
+                    <a href="lestableaux.html">Tableau</a>
+                    <a href="leslistes.html" >Liste</a>
+                    <a href="lesliens.html" class="activ">Lien & Menu</a>
+                    <a href="lesformulaires.html">Formulaire</a>
+                    <a href="multimedia.html">Multimédia</a>
+                    <a href="animations.html">Animations</a>
+
+            </nav>
+
+            <main>
+                <a href="#logo">
+                    <button type="button">
+                        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                    </button>
+                </a>
+
+                  <h2>Liens et menu</h2>
+                  <div class="ancre">
+                      <a href="#lien">Les liens</a><!--href sert a cibler-->
+                      <a href="#menu">Menu</a>
+                      <a href="#menuDeroulant">Menu déroulant</a>
+                  </div>
+
+                  <section id="lien">
+                      <h3>Les liens</h3>
+                      <a href="https://codepen.io" title="se rendre sur le site de Codepen ">Codepen </a> is a social developement environement for front-end designers ansd developers.<br>
+                      <a href="http://www.google.fr" target="_blank">Google</a> le moteur de recherche. <br>
+                      <a href="lib/cv.doc">Télécharger mon CV</a>
+                      <a href="lib/cv.pdf" target="_blank" title="afficher dans un nouvel onglet">Voir mon CV</a><br> <!--ajouter download si on veux forcer le telechargement-->
+                      <a href="#" onclick="window.print()">Imprimer la page</a><br>
+                      <a href="http://www.facebook.fr" target="_blank"><img src="img/facebook.ico"></a><br>
+                      Cliquez <a href="index.html"> ICI </a> pour vous rendre sur la page structure.
+
+                  </section>
+
+                          <section id="menu">
+                              <h3>Les menu</h3>
+                              <nav>
+                                  <ul>
+                                  <li><a href="#">Accueil</a></li>
+                                  <li><a href="#">Parcours</a></li>
+                                  <li><a href="#">Réalisation</a></li>
+                                  <li><a href="#">Contact</a></li>
+                                  </ul>
+                              </nav>
+
+                          </section>
+
+                          <section id="menuDeroulant">
+                              <h3>Menu déroulant</h3>
+                                    <nav>
+                                        <ul class="niveau1">
+                                            <li><a href="#">Acceuil</a></li>
+                                            <li class="sousMenu"><a href="#">Formation</a>
+                                                <ul class="niveau2">
+                                                    <li><a href="#">Etudiante</a></li>
+                                                    <li><a href="#">emploi du temps</a></li>
+                                                    <li><a href="#">Recherche d'emploi</a></li>
+                                                    <li><a href="#">Documents</a></li>
+                                                </ul>
+
+                                            </li>
+                                            <li><a href="#">Informations</a></li>
+                                            <li class="sousMenu"><a href="#">Cours</a>
+                                                <ul class="niveau2">
+                                                    <li><a href="#">internet</a></li>
+                                                    <li><a href="#">HTML/CSS</a></li>
+                                                    <li><a href="#">CMS</a></li>
+                                                    <li><a href="#">stats</a></li>
+                                                    <li><a href="#">Réseaux sociaux</a></li>
+                                                    <li><a href="#">Réferencement</a></li>
+                                                    <li><a href="#">Marketing</a></li>
+                                                    <li><a href="#">Cahier des charges</a></li>
+                                                    <li><a href="#">Photoshop</a></li>
+                                                </ul>
+
+                                            </li>
+                                            <li><a href="#">Mon Cv</a></li>
+
+                                        </ul>
+                                    </nav>
+
+                                  </section>
+
+
+
+
+            </main>
+
+            <footer>
+                <!--zone du bas, ex: liens administratifs, mention légales, plan du site, CGU, CGV, contact, copyright-->
+            </footer>
+
+
+
+
+
+
+
+        </body>
+    </html>

@@ -1,0 +1,62 @@
+I.installer composer sur le php pour acceder aux raccourcis de création.
+
+II.ensuite exécuter la commande de la création du project de symfony: 
+ <cmd>composer create-project symfony-standard-edition Symfony</cmd>
+
+III. edition des informations de la bdd hote-name-password-mailservice-etc..
+
+IV. download de boostrap récupération du cdn de font-awesome
+
+V. commande pour vérifier les commandes disponible
+<cmd> php bin/console </cmd>
+
+VI. commande pour demarrer le server et l'attribuer a un autre port si neccessaire
+<cmd> php bin/console server:run 127.0.0.1:8000</cmd>
+ A. On va sur le navigateur localhost:8000 et on voit symfony avec la toolbar de débogage
+ B. configuration du fichier routing.yml dans le namespace app/config
+  <code>hello:
+    path: /hello/{slug}
+    defaults: { _controller: AppBundle:Hello:Hello} </code>
+
+VII. Création du controller namespace src/AppBundle/controller/HelloController.php
+ A.
+  <cmd> php bin/console:container </cmd>
+  <cmd> php bin/console doctrine:database:create </cmd> // création de la Bdd (parameters.yml)
+  <cmd> php bin/console doctrine:generate:entity </cmd> // création d'une (entité de formu)
+  <cmd> php bin/console doctrine:schema:update </cmd> // creation de la bdd par rapport a ce qui nous a été enregistrer
+  <cmd> php bin/console doctrine:schema:update --force</cmd> // force la creation de la bdd
+
+IIX. liste les articles 
+
+IX. Créé un formulaire
+ <cmd> php bin/console doctrine:generate:form <cmd>AppBundle:Post</cmd> </cmd>
+
+X. Validation
+ entity\post.php
+
+XI. Creation de categorie
+ <cmd> php bin/console doctrine:generate:entity </cmd> // création d'une (entité de formu)
+ <cmd> AppBundle:Category </cmd>
+  A.modification du post.php
+  B. creation de la table category
+  <cmd> php bin/console doctrine:schema:update --force </cmd> // force la creation de la bdd
+  c. mis a jour automatique des entitées
+  <cmd> php bin/console doctrine:generate:entities AppBundle:Category </cmd> // methode de doctrine pour éviter les get->setter
+  <cmd> php bin/console doctrine:generate:entities AppBundle:Post </cmd> // methode de doctrine pour éviter les get->setter
+
+XII. Système d'authentification
+app/config/security.yml
+ <cmd> php bin/console doctrine:generate:entity <cmd>AppBundle:User</cmd> </cmd> // création d'une (entité de formu)
+ <cmd> php bin/console doctrine:schema:update --force </cmd> // force la creation de la bdd
+
+XIII. Importation du markdown
+<cmd> composer require cebe/markdown </cmd>
+
+XIV.cConfiguration des services
+
+
+
+
+
+
+

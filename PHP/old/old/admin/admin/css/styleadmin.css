@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/*CSS Document admin Johan*/
+
+
+/*DEBUT DE LA NAV*/
+.navbar {
+    /*background: #840404;*/
+    border-radius: 0;
+}
+/*FIN DE LA NAV*/
+.supr {
+    width: 50px;
+}
+.modif {
+    width: 50px;
+}

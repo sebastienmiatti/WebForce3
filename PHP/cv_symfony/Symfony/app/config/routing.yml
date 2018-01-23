@@ -1,0 +1,4 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+    # je prend tout les controller dans le appBundle et je lit leur annotations qui serviront de route
